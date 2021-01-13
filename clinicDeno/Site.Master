@@ -12,8 +12,10 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css/shared/shared.css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css/shared/icon.css" />
 
 </head>
 <body>
@@ -38,32 +40,24 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand grey-blue montserrat font-weight-bold logo-opacity" runat="server" href="~/">ClinicDeno</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+
+                    <a class="nav-link grey-blue navigation-opacity" runat="server" href="~/">Home</a>
+                    <a class="nav-link grey-blue navigation-opacity" runat="server" href="~/About">Clinic Registration</a>
+                    <a class="nav-link grey-blue navigation-opacity" runat="server" href="~/Contact">Doctor</a>
+                    <a class="nav-link grey-blue navigation-opacity" runat="server" href="~/Contact">Administrator</a>
                 </div>
             </div>
-        </div>
+        </nav>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
         </div>
 
     </form>
