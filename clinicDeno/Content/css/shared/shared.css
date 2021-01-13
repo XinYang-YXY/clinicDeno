@@ -1,0 +1,27 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.montserrat {
+    font-family: 'Montserrat';
+}
+.sans-serif{
+    font-family: sans-serif;
+}
+
+.grey-blue {
+    color: #829FD9 !important;
+}
+
+.logo-opacity{
+    opacity:0.8;
+}
+
+.logo-opacity:hover{
+    opacity:1;
+}
+
+.navigation-opacity{
+    opacity:0.65;
+}
+.navigation-opacity:hover{
+    opacity:1
+}
