@@ -14,8 +14,8 @@
 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <webopt:BundleReference runat="server" Path="~/Content/css" />
-    <webopt:BundleReference runat="server" Path="~/Content/myCSS/shared/shared.css" />
-    <webopt:BundleReference runat="server" Path="~/Content/myCSS/shared/icon.css" />
+    <link rel="stylesheet" href="~/Content/myCSS/shared/shared.css">
+    <link rel="stylesheet" href="~/Content/myCSS/shared/icon.css">
 
 </head>
 <body>
