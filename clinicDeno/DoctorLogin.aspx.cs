@@ -7,11 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace clinicDeno
 {
-    public partial class About : Page
+    public partial class DoctorLogin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = Environment.GetEnvironmentVariable("Hello").ToString();
 
         }
     }

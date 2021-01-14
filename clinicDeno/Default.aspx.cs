@@ -13,5 +13,20 @@ namespace clinicDeno
         {
 
         }
+
+        protected void doctorBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/DoctorLogin.aspx");
+        }
+
+        protected void adminBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminLogin.aspx");
+        }
+
+        protected void clinicBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ClinicRegistration.aspx");
+        }
     }
 }

@@ -7,11 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+
 namespace clinicDeno
 {
-
-
-    public partial class Contact
+    public partial class AdminLogin
     {
     }
 }
