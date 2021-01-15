@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="~/Content/myCSS/shared/position.css">
     <link rel="stylesheet" href="~/Content/myCSS/shared/button.css">
     <link rel="stylesheet" href="~/Content/myCSS/shared/overrideBootstrap.css">
+    <link rel="stylesheet" href="~/Content/myCSS/shared/inputField.css">
 </head>
 <body>
     <form runat="server">
