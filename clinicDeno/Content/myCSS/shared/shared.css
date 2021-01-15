@@ -7,7 +7,12 @@
     font-family: sans-serif;
 }
 .logo-size{
-    font-size: 1.7em;
+    font-size: 1.5em;
+}
+
+.font-size-13{
+    font-size:1.3em;
+   
 }
 
 .grey-blue {
@@ -18,6 +23,9 @@
 }
 .medium-font{
     font-weight: 500;
+}
+.bold-font{
+    font-weight: 900;
 }
 
 .logo-opacity{
@@ -56,7 +64,11 @@
 }
 
 .box-mobile{
-    max-width:310px
+    max-width:310px;
+}
+
+.box-desktop-600{
+    max-width:600px;
 }
 
 

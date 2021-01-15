@@ -149,6 +149,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\myCSS\shared\button.css" />
     <Content Include="Content\myCSS\shared\icon.css" />
+    <Content Include="Content\myCSS\shared\inputField.css" />
     <Content Include="Content\myCSS\shared\overrideBootstrap.css" />
     <Content Include="Content\myCSS\shared\position.css" />
     <Content Include="Content\myCSS\shared\shared.css" />
