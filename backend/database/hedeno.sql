@@ -21,7 +21,13 @@ CREATE TABLE `heDeno`.`Clinic` (
   `clinicType` VARCHAR(100) NOT NULL,
   `operatingHours` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`));
-
+               
+/* === Column Changes By XinYang === */               
+ALTER TABLE `heDeno`.`Clinic` 
+DROP COLUMN `operatingHours`,
+ADD COLUMN `startTime` TIME NOT NULL AFTER `clinicType`,
+ADD COLUMN `endTime` TIME NOT NULL AFTER `startTime`;
+               
 /* Doctor */
 CREATE TABLE `heDeno`.`Doctor` (
   `id` INT NOT NULL,
@@ -41,6 +47,7 @@ CREATE TABLE `heDeno`.`Doctor` (
     REFERENCES `heDeno`.`Clinic` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+
 
 /* Clinic Admin */
 CREATE TABLE `heDeno`.`ClinicAdmin` (
