@@ -13,5 +13,10 @@ namespace clinicDeno
         {
 
         }
+
+        protected void ClinicRegistrationBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
