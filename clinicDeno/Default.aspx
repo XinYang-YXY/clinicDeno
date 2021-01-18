@@ -12,4 +12,10 @@
         </div>
     </section>
 
+    <script>
+        $(document).ready(function () {
+            $(".nav-home").addClass("navigation-opacity-active").removeClass("navigation-opacity");
+        })
+    </script>
+
 </asp:Content>

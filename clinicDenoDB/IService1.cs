@@ -1,4 +1,5 @@
-﻿using System;
+﻿using clinicDenoDB.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -18,6 +19,10 @@ namespace clinicDenoDB
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
+        [OperationContract]
+        Clinic GetClinicById(string id);
+        [OperationContract]
+        int CreateClinic( string address, string phoneNum, string email, string clinicName, string clinicType, TimeSpan startTime, TimeSpan endTime);
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

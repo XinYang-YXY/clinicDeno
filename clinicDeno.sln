@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clinicDeno", "clinicDeno\clinicDeno.csproj", "{29A797F6-8E19-4550-99E7-929F54321780}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C8613579-AEA9-4D61-84D3-86147B4499FC} = {C8613579-AEA9-4D61-84D3-86147B4499FC}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clinicDenoDB", "clinicDenoDB\clinicDenoDB.csproj", "{C8613579-AEA9-4D61-84D3-86147B4499FC}"
 EndProject

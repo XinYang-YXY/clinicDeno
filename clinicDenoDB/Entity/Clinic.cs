@@ -14,16 +14,26 @@ namespace clinicDenoDB.Entity
         public string ClinicName { get; set; }
 
         public string ClinicType { get; set; }
-        public string StartTime { get; set; }
-        public string EndTime { get; set; }
+        public TimeSpan StartTime { get; set; }
+        public TimeSpan EndTime { get; set; }
         public Clinic()
         {
 
         }
         // Define a constructor to initialize all the properties
-        public Clinic(string id, string address, string phoneNum, string email, string clinicName, string clinicType, string startTime, string endTime)
+        public Clinic(string id, string address, string phoneNum, string email, string clinicName, string clinicType, TimeSpan startTime, TimeSpan endTime)
         {
             Id = id;
+            Address = address;
+            PhoneNum = phoneNum;
+            Email = email;
+            ClinicName = clinicName;
+            ClinicType = clinicType;
+            StartTime = startTime;
+            EndTime = endTime;
+        }
+        public Clinic(string address, string phoneNum, string email, string clinicName, string clinicType, TimeSpan startTime, TimeSpan endTime)
+        {
             Address = address;
             PhoneNum = phoneNum;
             Email = email;
@@ -65,12 +75,41 @@ namespace clinicDenoDB.Entity
                 string email = row["email"].ToString();
                 string clinicName = row["clinicName"].ToString();
                 string clinicType = row["clinicType"].ToString();
-                string startTime = row["startTime"].ToString();
-                string endTime = row["endTime"].ToString();
+                TimeSpan startTime = TimeSpan.Parse(row["startTime"].ToString());
+                TimeSpan endTime = TimeSpan.Parse(row["endTime"].ToString());
 
                 obj = new Clinic(clinicId, address, phoneNum, email, clinicName, clinicType, startTime, endTime);
             }
             return obj;
+        }
+        public int Insert()
+        {
+            //Step 1 -  Define a connection to the database by getting
+            //          the connection string from App.config
+            string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
+            MySqlConnection myConn = new MySqlConnection(DBConnect);
+
+            // Step 2 - Create a SqlCommand object to add record with INSERT statement
+            string sqlStmt = "INSERT INTO Clinic ( address, phoneNum, email, clinicName, clinicType, startTime, endTime) " +
+                "VALUES ( @paraAddress,@paraPhoneNum, @paraEmail, @paraClinicName, @paraClinicType, @paraStartTime, @paraEndTime)";
+            MySqlCommand sqlCmd = new MySqlCommand(sqlStmt, myConn);
+
+            // Step 3 : Add each parameterised variable with value
+           // sqlCmd.Parameters.AddWithValue("@paraId", Id);
+            sqlCmd.Parameters.AddWithValue("@paraAddress", Address);
+            sqlCmd.Parameters.AddWithValue("@paraPhoneNum", PhoneNum);
+            sqlCmd.Parameters.AddWithValue("@paraEmail", Email);
+            sqlCmd.Parameters.AddWithValue("@paraClinicName", ClinicName);
+            sqlCmd.Parameters.AddWithValue("@paraClinicType", ClinicType);
+            sqlCmd.Parameters.AddWithValue("@paraStartTime", StartTime);
+            sqlCmd.Parameters.AddWithValue("@paraEndTime", EndTime);
+            // Step 4 Open connection the execute NonQuery of sql command   
+            myConn.Open();
+            int result = sqlCmd.ExecuteNonQuery();
+            // Step 5 :Close connection
+            myConn.Close();
+
+            return result;
         }
     }
 }

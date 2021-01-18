@@ -49,12 +49,12 @@
                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
+                <div class="navbar-nav ml-auto">
 
-                    <a class="nav-link grey-blue navigation-opacity montserrat" runat="server" href="~/">Home</a>
-                    <a class="nav-link grey-blue navigation-opacity montserrat" runat="server" href="~/ClinicRegistration">Clinic Registration</a>
-                    <a class="nav-link grey-blue navigation-opacity montserrat" runat="server" href="~/DoctorLogin">Doctor</a>
-                    <a class="nav-link grey-blue navigation-opacity montserrat" runat="server" href="~/AdminLogin">Administrator</a>
+                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-home" runat="server" href="~/">Home</a>
+                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-clinic" runat="server" href="~/ClinicRegistration">Clinic Registration</a>
+                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-doctor" runat="server" href="~/DoctorLogin">Doctor</a>
+                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-admin" runat="server" href="~/AdminLogin">Administrator</a>
                 </div>
             </div>
         </nav>

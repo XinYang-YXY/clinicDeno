@@ -3,8 +3,12 @@
 .montserrat {
     font-family: 'Montserrat';
 }
-.sans-serif{
-    font-family: sans-serif;
+.openSans{
+    font-family: 'Open Sans';
+}
+.dark-text{
+    color: rgba(35, 10, 89, 0.8);
+    font-weight: 900;
 }
 .logo-size{
     font-size: 1.5em;
@@ -34,10 +38,14 @@
 
 .logo-opacity:hover{
     opacity:1;
+    font-weight:600;
 }
 
 .navigation-opacity{
     opacity:0.65;
+}
+.navigation-opacity-active{
+    opacity: 1 ;
 }
 .navigation-opacity:hover{
     opacity:1
@@ -45,6 +53,10 @@
 
 .margin-t-16{
     margin-top:16px;
+}
+
+.html-hidden{
+    display: none;
 }
 
 
@@ -65,6 +77,10 @@
 
 .box-mobile{
     max-width:310px;
+}
+
+.box-success{
+    max-width:700px;
 }
 
 .box-desktop-600{
