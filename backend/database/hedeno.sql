@@ -27,6 +27,11 @@ ALTER TABLE `heDeno`.`Clinic`
 DROP COLUMN `operatingHours`,
 ADD COLUMN `startTime` TIME NOT NULL AFTER `clinicType`,
 ADD COLUMN `endTime` TIME NOT NULL AFTER `startTime`;
+/* === Column Changes By XinYang === */                  
+ALTER TABLE `heDeno`.`Clinic` 
+ADD UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE;
+;
+          
                
 /* Doctor */
 CREATE TABLE `heDeno`.`Doctor` (
