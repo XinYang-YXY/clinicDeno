@@ -31,6 +31,11 @@ ADD COLUMN `endTime` TIME NOT NULL AFTER `startTime`;
 ALTER TABLE `heDeno`.`Clinic` 
 ADD UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE;
 ;
+/* === Column Changes By XinYang === */                 
+SET FOREIGN_KEY_CHECKS=0;
+ALTER TABLE `heDeno`.`Clinic` 
+CHANGE COLUMN `id` `id` INT(11) NOT NULL AUTO_INCREMENT ;
+SET FOREIGN_KEY_CHECKS=1;
           
                
 /* Doctor */
