@@ -190,6 +190,370 @@
             The Auth header value.
             </summary>
         </member>
+        <member name="P:SendGrid.BaseClientOptions.HttpErrorAsException">
+            <summary>
+            Gets or sets a value indicating whether HTTP error responses should be raised as exceptions. Default is false.
+            </summary>
+        </member>
+        <member name="T:SendGrid.Helpers.Errors.ErrorHandler">
+            <summary>
+            Error handler for requests.
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.ErrorHandler.ThrowException(System.Net.Http.HttpResponseMessage)">
+            <summary>
+            Throw the exception based on HttpResponseMessage
+            </summary>
+            <param name="message">Response Message from API</param>
+            <returns>Return the exception. Obs: Exceptions from an Async Void Method Can’t Be Caught with Catch </returns>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.ErrorHandler.GetErrorMessage(System.Net.Http.HttpResponseMessage)">
+            <summary>
+            Get error based on Response from SendGrid API
+            Method taken from the StrongGrid project (https://github.com/Jericho/StrongGrid) with some minor changes. Thanks Jericho (https://github.com/Jericho)
+            </summary>
+            <param name="message">Response Message from API</param>
+            <returns>Return string with the error Status Code and the Message</returns>
+        </member>
+        <member name="T:SendGrid.Helpers.Errors.Model.BadRequestException">
+            <summary>
+            Represents errors with status code 400
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.BadRequestException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.BadRequestException"/> class.
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.BadRequestException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.BadRequestException"/> class with a specified error.
+            </summary>
+            <param name="message"> The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.BadRequestException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.BadRequestException"/> class with a specified error and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference  if no inner exception is specified.</param>
+        </member>
+        <member name="T:SendGrid.Helpers.Errors.Model.ForbiddenException">
+            <summary>
+            Represents errors with status code 403
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.ForbiddenException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.ForbiddenException"/> class.
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.ForbiddenException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.ForbiddenException"/> class with a specified error.
+            </summary>
+            <param name="message"> The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.ForbiddenException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.ForbiddenException"/> class with a specified error and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference  if no inner exception is specified.</param>
+        </member>
+        <member name="T:SendGrid.Helpers.Errors.Model.MethodNotAllowedException">
+            <summary>
+            Represents errors with status code 405
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.MethodNotAllowedException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.MethodNotAllowedException"/> class.
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.MethodNotAllowedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.MethodNotAllowedException"/> class with a specified error.
+            </summary>
+            <param name="message"> The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.MethodNotAllowedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.MethodNotAllowedException"/> class with a specified error and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference  if no inner exception is specified.</param>
+        </member>
+        <member name="T:SendGrid.Helpers.Errors.Model.NotFoundException">
+            <summary>
+            Represents errors with status code 404
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.NotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.NotFoundException"/> class.
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.NotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.NotFoundException"/> class with a specified error.
+            </summary>
+            <param name="message"> The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.NotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.NotFoundException"/> class with a specified error and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference  if no inner exception is specified.</param>
+        </member>
+        <member name="T:SendGrid.Helpers.Errors.Model.PayloadTooLargeException">
+            <summary>
+            Represents errors with status code 413
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.PayloadTooLargeException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.PayloadTooLargeException"/> class.
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.PayloadTooLargeException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.PayloadTooLargeException"/> class with a specified error.
+            </summary>
+            <param name="message"> The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.PayloadTooLargeException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.PayloadTooLargeException"/> class with a specified error and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference  if no inner exception is specified.</param>
+        </member>
+        <member name="T:SendGrid.Helpers.Errors.Model.RequestErrorException">
+            <summary>
+            Represents errors with status code 4xx. Being x any number
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.RequestErrorException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.RequestErrorException"/> class.
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.RequestErrorException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.RequestErrorException"/> class with a specified error.
+            </summary>
+            <param name="message"> The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.RequestErrorException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.RequestErrorException"/> class with a specified error and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference  if no inner exception is specified.</param>
+        </member>
+        <member name="T:SendGrid.Helpers.Errors.Model.SendGridErrorResponse">
+            <summary>
+            Base class for the json error response
+            </summary>
+        </member>
+        <member name="P:SendGrid.Helpers.Errors.Model.SendGridErrorResponse.ErrorHttpStatusCode">
+            <summary>
+            Gets or sets the error Status Code
+            </summary>
+        </member>
+        <member name="P:SendGrid.Helpers.Errors.Model.SendGridErrorResponse.ErrorReasonPhrase">
+            <summary>
+            Gets or sets the error Reason Phrase
+            </summary>
+        </member>
+        <member name="P:SendGrid.Helpers.Errors.Model.SendGridErrorResponse.SendGridErrorMessage">
+            <summary>
+            Gets or sets the SendGrid error message
+            </summary>
+        </member>
+        <member name="P:SendGrid.Helpers.Errors.Model.SendGridErrorResponse.FieldWithError">
+            <summary>
+            Gets or sets the field that has the error
+            </summary>
+        </member>
+        <member name="P:SendGrid.Helpers.Errors.Model.SendGridErrorResponse.HelpLink">
+            <summary>
+            Gets or sets the error default help
+            </summary>
+        </member>
+        <member name="T:SendGrid.Helpers.Errors.Model.SendGridInternalException">
+            <summary>
+            Represents errors with status code 5xx. Being x any number
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.SendGridInternalException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.SendGridInternalException"/> class.
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.SendGridInternalException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.SendGridInternalException"/> class with a specified error.
+            </summary>
+            <param name="message"> The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.SendGridInternalException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.SendGridInternalException"/> class with a specified error and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference  if no inner exception is specified.</param>
+        </member>
+        <member name="T:SendGrid.Helpers.Errors.Model.ServerUnavailableException">
+            <summary>
+            Represents errors with status code 500
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.ServerUnavailableException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.ServerUnavailableException"/> class.
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.ServerUnavailableException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.ServerUnavailableException"/> class with a specified error.
+            </summary>
+            <param name="message"> The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.ServerUnavailableException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.ServerUnavailableException"/> class with a specified error and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference  if no inner exception is specified.</param>
+        </member>
+        <member name="T:SendGrid.Helpers.Errors.Model.ServiceNotAvailableException">
+            <summary>
+            Represents errors with status code 503
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.ServiceNotAvailableException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.ServiceNotAvailableException"/> class.
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.ServiceNotAvailableException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.ServiceNotAvailableException"/> class with a specified error.
+            </summary>
+            <param name="message"> The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.ServiceNotAvailableException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.ServiceNotAvailableException"/> class with a specified error and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference  if no inner exception is specified.</param>
+        </member>
+        <member name="T:SendGrid.Helpers.Errors.Model.TooManyRequestsException">
+            <summary>
+            Represents errors with status code 429
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.TooManyRequestsException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.TooManyRequestsException"/> class.
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.TooManyRequestsException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.TooManyRequestsException"/> class with a specified error.
+            </summary>
+            <param name="message"> The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.TooManyRequestsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.TooManyRequestsException"/> class with a specified error and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference  if no inner exception is specified.</param>
+        </member>
+        <member name="T:SendGrid.Helpers.Errors.Model.UnauthorizedException">
+            <summary>
+            Represents errors with status code 401
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.UnauthorizedException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.UnauthorizedException"/> class.
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.UnauthorizedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.UnauthorizedException"/> class with a specified error.
+            </summary>
+            <param name="message"> The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.UnauthorizedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.UnauthorizedException"/> class with a specified error and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference  if no inner exception is specified.</param>
+        </member>
+        <member name="T:SendGrid.Helpers.Errors.Model.UnsupportedMediaTypeException">
+            <summary>
+            Represents errors with status code 415
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.UnsupportedMediaTypeException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.UnsupportedMediaTypeException"/> class.
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.UnsupportedMediaTypeException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.UnsupportedMediaTypeException"/> class with a specified error.
+            </summary>
+            <param name="message"> The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:SendGrid.Helpers.Errors.Model.UnsupportedMediaTypeException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SendGrid.Helpers.Errors.Model.UnsupportedMediaTypeException"/> class with a specified error and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference  if no inner exception is specified.</param>
+        </member>
+        <member name="T:SendGrid.Helpers.EventWebhook.RequestValidator">
+            <summary>
+            This class allows you to use the Event Webhook feature. Read the docs for
+            more details: https://sendgrid.com/docs/for-developers/tracking-events/event
+            </summary>
+        </member>
+        <member name="F:SendGrid.Helpers.EventWebhook.RequestValidator.SIGNATURE_HEADER">
+            <summary>
+            Signature verification HTTP header name for the signature being sent.
+            </summary>
+        </member>
+        <member name="F:SendGrid.Helpers.EventWebhook.RequestValidator.TIMESTAMP_HEADER">
+            <summary>
+            Timestamp HTTP header name for timestamp.
+            </summary>
+        </member>
+        <member name="M:SendGrid.Helpers.EventWebhook.RequestValidator.ConvertPublicKeyToECDSA(System.String)">
+            <summary>
+            Convert the public key string to a <see cref="T:EllipticCurve.PublicKey"/>.
+            </summary>
+            <param name="publicKey">verification key under Mail Settings</param>
+            <returns>public key using the ECDSA algorithm</returns>
+        </member>
+        <member name="M:SendGrid.Helpers.EventWebhook.RequestValidator.VerifySignature(EllipticCurve.PublicKey,System.String,System.String,System.String)">
+            <summary>
+            Verify signed event webhook requests.
+            </summary>
+            <param name="publicKey">elliptic curve public key</param>
+            <param name="payload">event payload in the request body</param>
+            <param name="signature">value obtained from the 'X-Twilio-Email-Event-Webhook-Signature' header</param>
+            <param name="timestamp">value obtained from the 'X-Twilio-Email-Event-Webhook-Timestamp' header</param>
+            <returns>true or false if signature is valid</returns>
+        </member>
         <member name="T:SendGrid.Helpers.Mail.MailHelper">
             <summary>
             Simplified email sending for common use cases.
@@ -199,7 +563,7 @@
             <summary>
             Send a single simple email.
             </summary>
-            <param name="from">An email object that may contain the recipient’s name, but must always contain the sender’s email.</param>
+            <param name="from">An email object that may contain the sender’s name, but must always contain the sender’s email.</param>
             <param name="to">An email object that may contain the recipient’s name, but must always contain the recipient’s email.</param>
             <param name="subject">The subject of your email. This may be overridden by SetGlobalSubject().</param>
             <param name="plainTextContent">The text/plain content of the email body.</param>
@@ -210,7 +574,7 @@
             <summary>
             Send a single dynamic template email.
             </summary>
-            <param name="from">An email object that may contain the recipient’s name, but must always contain the sender’s email.</param>
+            <param name="from">An email object that may contain the sender’s name, but must always contain the sender’s email.</param>
             <param name="to">An email object that may contain the recipient’s name, but must always contain the recipient’s email.</param>
             <param name="templateId">The ID of the template.</param>
             <param name="dynamicTemplateData">The data with which to populate the dynamic template.</param>
@@ -220,7 +584,7 @@
             <summary>
             Send a single simple email to multiple recipients.
             </summary>
-            <param name="from">An email object that may contain the recipient’s name, but must always contain the sender’s email.</param>
+            <param name="from">An email object that may contain the sender’s name, but must always contain the sender’s email.</param>
             <param name="tos">A list of email objects that may contain the recipient’s name, but must always contain the recipient’s email.</param>
             <param name="subject">The subject of your email. This may be overridden by SetGlobalSubject().</param>
             <param name="plainTextContent">The text/plain content of the email body.</param>
@@ -231,7 +595,7 @@
             <summary>
             Send a single simple email to multiple recipients.
             </summary>
-            <param name="from">An email object that may contain the recipient’s name, but must always contain the sender’s email.</param>
+            <param name="from">An email object that may contain the sender’s name, but must always contain the sender’s email.</param>
             <param name="tos">A list of email objects that may contain the recipient’s name, but must always contain the recipient’s email.</param>
             <param name="templateId">The ID of the template.</param>
             <param name="dynamicTemplateData">The data with which to populate the dynamic template.</param>
@@ -241,7 +605,7 @@
             <summary>
             Send multiple emails to multiple recipients.
             </summary>
-            <param name="from">An email object that may contain the recipient’s name, but must always contain the sender’s email.</param>
+            <param name="from">An email object that may contain the sender’s name, but must always contain the sender’s email.</param>
             <param name="tos">A list of email objects that may contain the recipient’s name, but must always contain the recipient’s email.</param>
             <param name="subjects">The subject of your email. This may be overridden by SetGlobalSubject().</param>
             <param name="plainTextContent">The text/plain content of the email body.</param>
@@ -253,7 +617,7 @@
             <summary>
             Send multiple emails to multiple recipients.
             </summary>
-            <param name="from">An email object that may contain the recipient’s name, but must always contain the sender’s email.</param>
+            <param name="from">An email object that may contain the sender’s name, but must always contain the sender’s email.</param>
             <param name="tos">A list of email objects that may contain the recipient’s name, but must always contain the recipient’s email.</param>
             <param name="templateId">The ID of the template.</param>
             <param name="dynamicTemplateData">The data with which to populate the dynamic template.</param>
@@ -270,7 +634,7 @@
             <summary>
             Send a single simple email to multiple recipients with option for displaying all the recipients present in "To" section of email.
             </summary>
-            <param name="from">An email object that may contain the recipient’s name, but must always contain the sender’s email.</param>
+            <param name="from">An email object that may contain the sender’s name, but must always contain the sender’s email.</param>
             <param name="tos">A list of email objects that may contain the recipient’s name, but must always contain the recipient’s email.</param>
             <param name="subject">The subject of your email. This may be overridden by SetGlobalSubject().</param>
             <param name="plainTextContent">The text/plain content of the email body.</param>
@@ -982,7 +1346,7 @@
             <param name="personalizationIndex">Specify the index of the Personalization object where you want to add the custom args.</param>
             <param name="personalization">A personalization object to append to the message.</param>
         </member>
-        <member name="M:SendGrid.Helpers.Mail.SendGridMessage.SetSendAt(System.Int32,System.Int32,SendGrid.Helpers.Mail.Personalization)">
+        <member name="M:SendGrid.Helpers.Mail.SendGridMessage.SetSendAt(System.Int64,System.Int32,SendGrid.Helpers.Mail.Personalization)">
             <summary>
             Specify the unix timestamp to specify when you want the email to be sent from Twilio SendGrid.
             </summary>
@@ -1236,10 +1600,11 @@
             <param name="utmSource">Name of the referrer source (e.g. Google, SomeDomain.com, or Marketing Email).</param>
             <param name="utmTerm">Used to identify any paid keywords.</param>
         </member>
-        <member name="M:SendGrid.Helpers.Mail.SendGridMessage.Serialize">
+        <member name="M:SendGrid.Helpers.Mail.SendGridMessage.Serialize(System.Boolean)">
             <summary>
             Creates the JSON object required to make a request to Twilio SendGrid.
             </summary>
+            <param name="useDefaultSerialization">Whether or not to use JsonConvert.DefaultSettings for serialization.</param>
             <returns>The JSON object required to make a request to Twilio SendGrid.</returns>
         </member>
         <member name="T:SendGrid.Helpers.Reliability.ReliabilitySettings">
@@ -1406,6 +1771,11 @@
             Gets or sets the status code returned from Twilio SendGrid.
             </summary>
         </member>
+        <member name="P:SendGrid.Response.IsSuccessStatusCode">
+            <summary>
+            Gets a value indicating whether Status Code of this response indicates success.
+            </summary>
+        </member>
         <member name="P:SendGrid.Response.Body">
             <summary>
             Gets or sets the response body returned from Twilio SendGrid.
@@ -1435,7 +1805,7 @@
             An HTTP client wrapper for interacting with Twilio SendGrid's API.
             </summary>
         </member>
-        <member name="M:SendGrid.SendGridClient.#ctor(System.Net.IWebProxy,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.String)">
+        <member name="M:SendGrid.SendGridClient.#ctor(System.Net.IWebProxy,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.String,System.Boolean)">
             <summary>
             Initializes a new instance of the <see cref="T:SendGrid.SendGridClient"/> class.
             </summary>
@@ -1447,7 +1817,7 @@
             <param name="urlPath">Path to endpoint (e.g. /path/to/endpoint).</param>
             <returns>Interface to the Twilio SendGrid REST API.</returns>
         </member>
-        <member name="M:SendGrid.SendGridClient.#ctor(System.Net.Http.HttpClient,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.String)">
+        <member name="M:SendGrid.SendGridClient.#ctor(System.Net.Http.HttpClient,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.String,System.Boolean)">
             <summary>
             Initializes a new instance of the <see cref="T:SendGrid.SendGridClient"/> class.
             </summary>

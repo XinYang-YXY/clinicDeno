@@ -13,5 +13,10 @@ namespace clinicDeno
         {
 
         }
+
+        protected void clinicAdminLoginBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

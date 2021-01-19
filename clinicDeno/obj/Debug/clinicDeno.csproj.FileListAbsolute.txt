@@ -90,3 +90,10 @@ C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\System.Memory.xml
 C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\System.Numerics.Vectors.xml
 C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\FluentEmail.Core.dll
+C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\SendGrid.dll
+C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\StarkbankEcdsa.dll
+C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\SendGrid.pdb
+C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\SendGrid.xml

@@ -11,34 +11,25 @@ namespace clinicDeno
 {
 
 
-    public partial class AdminLogin
+    public partial class AdminRegistrationSuccess
     {
 
         /// <summary>
-        /// ClinicAdminLoginEmail control.
+        /// goAdminLoginBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ClinicAdminLoginEmail;
+        protected global::System.Web.UI.WebControls.Button goAdminLoginBtn;
 
         /// <summary>
-        /// ClinicAdminLoginPassword control.
+        /// goToHomeBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ClinicAdminLoginPassword;
-
-        /// <summary>
-        /// clinicAdminLoginBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button clinicAdminLoginBtn;
+        protected global::System.Web.UI.WebControls.Button goToHomeBtn;
     }
 }
