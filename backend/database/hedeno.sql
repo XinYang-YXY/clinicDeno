@@ -77,7 +77,11 @@ CREATE TABLE `heDeno`.`ClinicAdmin` (
     REFERENCES `heDeno`.`Clinic` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
-
+/* === Column Changes By XinYang === */   
+SET FOREIGN_KEY_CHECKS=0;
+ALTER TABLE `heDeno`.`ClinicAdmin` 
+CHANGE COLUMN `id` `id` INT(11) NOT NULL AUTO_INCREMENT ;
+SET FOREIGN_KEY_CHECKS=1;     
 
 /* Appointment */
 CREATE TABLE `heDeno`.`Appointment` (
