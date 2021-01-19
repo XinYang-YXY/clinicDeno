@@ -31,17 +31,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetClinicById">
+  <xs:element name="GetClinicByName">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="givenClinicName" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetClinicByIdResponse">
+  <xs:element name="GetClinicByNameResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" minOccurs="0" name="GetClinicByIdResult" nillable="true" type="q3:Clinic" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" minOccurs="0" name="GetClinicByNameResult" nillable="true" type="q3:Clinic" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -62,6 +62,39 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="CreateClinicResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllClinic">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllClinicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" minOccurs="0" name="GetAllClinicResult" nillable="true" type="q6:ArrayOfClinic" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateClinicAdmin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phoneNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dob" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clinicId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateClinicAdminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateClinicAdminResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -18,10 +18,22 @@ namespace clinicDenoDB
             return clinic.Insert();
         }
 
-        public Clinic GetClinicById(string id)
+        public int CreateClinicAdmin(string email, string phoneNum, string firstName, string lastName, DateTime dob, string gender, string password, string clinicId)
+        {
+            ClinicAdmin clinicAdmin = new ClinicAdmin(email, phoneNum, firstName, lastName, dob, gender, password, clinicId);
+            return clinicAdmin.Insert();
+        }
+
+        public List<Clinic> GetAllClinic()
+        {
+                Clinic clinic = new Clinic();
+                return clinic.SelectAll();
+        }
+
+        public Clinic GetClinicByName(string givenClinicName)
         {
             Clinic clinic = new Clinic();
-            return clinic.SelectById(id);
+            return clinic.SelectByName(givenClinicName);
         }
 
         public string GetData(int value)

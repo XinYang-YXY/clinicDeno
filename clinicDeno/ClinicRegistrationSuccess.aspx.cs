@@ -22,11 +22,12 @@ namespace clinicDeno
         protected void addAdminBtn_Click(object sender, EventArgs e)
         {
 
+            Response.Redirect("~/AdminRegistration.aspx");
         }
 
         protected void goBackHomeBtn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Default.aspx");
         }
     }
 }

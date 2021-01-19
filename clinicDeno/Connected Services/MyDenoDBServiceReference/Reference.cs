@@ -247,17 +247,29 @@ namespace clinicDeno.MyDenoDBServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.CompositeType> GetDataUsingDataContractAsync(clinicDeno.MyDenoDBServiceReference.CompositeType composite);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetClinicById", ReplyAction="http://tempuri.org/IService1/GetClinicByIdResponse")]
-        clinicDeno.MyDenoDBServiceReference.Clinic GetClinicById(string id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetClinicByName", ReplyAction="http://tempuri.org/IService1/GetClinicByNameResponse")]
+        clinicDeno.MyDenoDBServiceReference.Clinic GetClinicByName(string givenClinicName);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetClinicById", ReplyAction="http://tempuri.org/IService1/GetClinicByIdResponse")]
-        System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Clinic> GetClinicByIdAsync(string id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetClinicByName", ReplyAction="http://tempuri.org/IService1/GetClinicByNameResponse")]
+        System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Clinic> GetClinicByNameAsync(string givenClinicName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateClinic", ReplyAction="http://tempuri.org/IService1/CreateClinicResponse")]
         int CreateClinic(string address, string phoneNum, string email, string clinicName, string clinicType, System.TimeSpan startTime, System.TimeSpan endTime);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateClinic", ReplyAction="http://tempuri.org/IService1/CreateClinicResponse")]
         System.Threading.Tasks.Task<int> CreateClinicAsync(string address, string phoneNum, string email, string clinicName, string clinicType, System.TimeSpan startTime, System.TimeSpan endTime);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllClinic", ReplyAction="http://tempuri.org/IService1/GetAllClinicResponse")]
+        clinicDeno.MyDenoDBServiceReference.Clinic[] GetAllClinic();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllClinic", ReplyAction="http://tempuri.org/IService1/GetAllClinicResponse")]
+        System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Clinic[]> GetAllClinicAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateClinicAdmin", ReplyAction="http://tempuri.org/IService1/CreateClinicAdminResponse")]
+        int CreateClinicAdmin(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string password, string clinicId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateClinicAdmin", ReplyAction="http://tempuri.org/IService1/CreateClinicAdminResponse")]
+        System.Threading.Tasks.Task<int> CreateClinicAdminAsync(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string password, string clinicId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -303,12 +315,12 @@ namespace clinicDeno.MyDenoDBServiceReference {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
         
-        public clinicDeno.MyDenoDBServiceReference.Clinic GetClinicById(string id) {
-            return base.Channel.GetClinicById(id);
+        public clinicDeno.MyDenoDBServiceReference.Clinic GetClinicByName(string givenClinicName) {
+            return base.Channel.GetClinicByName(givenClinicName);
         }
         
-        public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Clinic> GetClinicByIdAsync(string id) {
-            return base.Channel.GetClinicByIdAsync(id);
+        public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Clinic> GetClinicByNameAsync(string givenClinicName) {
+            return base.Channel.GetClinicByNameAsync(givenClinicName);
         }
         
         public int CreateClinic(string address, string phoneNum, string email, string clinicName, string clinicType, System.TimeSpan startTime, System.TimeSpan endTime) {
@@ -317,6 +329,22 @@ namespace clinicDeno.MyDenoDBServiceReference {
         
         public System.Threading.Tasks.Task<int> CreateClinicAsync(string address, string phoneNum, string email, string clinicName, string clinicType, System.TimeSpan startTime, System.TimeSpan endTime) {
             return base.Channel.CreateClinicAsync(address, phoneNum, email, clinicName, clinicType, startTime, endTime);
+        }
+        
+        public clinicDeno.MyDenoDBServiceReference.Clinic[] GetAllClinic() {
+            return base.Channel.GetAllClinic();
+        }
+        
+        public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Clinic[]> GetAllClinicAsync() {
+            return base.Channel.GetAllClinicAsync();
+        }
+        
+        public int CreateClinicAdmin(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string password, string clinicId) {
+            return base.Channel.CreateClinicAdmin(email, phoneNum, firstName, lastName, dob, gender, password, clinicId);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreateClinicAdminAsync(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string password, string clinicId) {
+            return base.Channel.CreateClinicAdminAsync(email, phoneNum, firstName, lastName, dob, gender, password, clinicId);
         }
     }
 }

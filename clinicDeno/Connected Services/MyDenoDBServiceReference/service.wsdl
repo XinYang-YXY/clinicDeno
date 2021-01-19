@@ -20,17 +20,29 @@
   <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetClinicById_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetClinicById" />
+  <wsdl:message name="IService1_GetClinicByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClinicByName" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetClinicById_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetClinicByIdResponse" />
+  <wsdl:message name="IService1_GetClinicByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClinicByNameResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_CreateClinic_InputMessage">
     <wsdl:part name="parameters" element="tns:CreateClinic" />
   </wsdl:message>
   <wsdl:message name="IService1_CreateClinic_OutputMessage">
     <wsdl:part name="parameters" element="tns:CreateClinicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllClinic_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllClinic" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllClinic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllClinicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateClinicAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateClinicAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateClinicAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateClinicAdminResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
@@ -41,13 +53,21 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetClinicById">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetClinicById" message="tns:IService1_GetClinicById_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetClinicByIdResponse" message="tns:IService1_GetClinicById_OutputMessage" />
+    <wsdl:operation name="GetClinicByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetClinicByName" message="tns:IService1_GetClinicByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetClinicByNameResponse" message="tns:IService1_GetClinicByName_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="CreateClinic">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateClinic" message="tns:IService1_CreateClinic_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateClinicResponse" message="tns:IService1_CreateClinic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllClinic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllClinic" message="tns:IService1_GetAllClinic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllClinicResponse" message="tns:IService1_GetAllClinic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateClinicAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateClinicAdmin" message="tns:IService1_CreateClinicAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateClinicAdminResponse" message="tns:IService1_CreateClinicAdmin_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -70,8 +90,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetClinicById">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetClinicById" style="document" />
+    <wsdl:operation name="GetClinicByName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetClinicByName" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -81,6 +101,24 @@
     </wsdl:operation>
     <wsdl:operation name="CreateClinic">
       <soap:operation soapAction="http://tempuri.org/IService1/CreateClinic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllClinic">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllClinic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateClinicAdmin">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateClinicAdmin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

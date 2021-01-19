@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Data;
 
 
@@ -42,7 +43,7 @@ namespace clinicDenoDB.Entity
             StartTime = startTime;
             EndTime = endTime;
         }
-        public Clinic SelectById(string id)
+        public Clinic SelectByName(string givenClinicName)
         {
             //Customer cust = new Customer("111", "Phoon LK", "Nanyang Polytechnic", "560860", "61234567", "91234567");
             //return cust;
@@ -53,9 +54,9 @@ namespace clinicDenoDB.Entity
             MySqlConnection myConn = new MySqlConnection(DBConnect);
 
             //Step 2 -  Create a DataAdapter to retrieve data from the database table
-            string sqlstmt = "Select * from Clinic where id = @paraId";
+            string sqlstmt = "Select * from Clinic where clinicName = @paraClinicName";
             MySqlDataAdapter da = new MySqlDataAdapter(sqlstmt, myConn);
-            da.SelectCommand.Parameters.AddWithValue("@paraId", id);
+            da.SelectCommand.Parameters.AddWithValue("@paraClinicName", givenClinicName);
 
             //Step 3 -  Create a DataSet to store the data to be retrieved
             DataSet ds = new DataSet();
@@ -110,6 +111,43 @@ namespace clinicDenoDB.Entity
             myConn.Close();
 
             return result;
+        }
+        public List<Clinic> SelectAll()
+        {
+            //Step 1 -  Define a connection to the database by getting
+            //          the connection string from App.config
+            string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
+            MySqlConnection myConn = new MySqlConnection(DBConnect);
+
+            //Step 2 -  Create a DataAdapter object to retrieve data from the database table
+            string sqlStmt = "Select * from Clinic";
+            MySqlDataAdapter da = new MySqlDataAdapter(sqlStmt, myConn);
+
+            //Step 3 -  Create a DataSet to store the data to be retrieved
+            DataSet ds = new DataSet();
+
+            //Step 4 -  Use the DataAdapter to fill the DataSet with data retrieved
+            da.Fill(ds);
+
+            //Step 5 -  Read data from DataSet to List
+            List<Clinic> clinicList = new List<Clinic>();
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            for (int i = 0; i < rec_cnt; i++)
+            {
+                DataRow row = ds.Tables[0].Rows[i];  // Sql command returns only one record
+                string clinicId = row["id"].ToString();
+                string address = row["address"].ToString();
+                string phoneNum = row["phoneNum"].ToString();
+                string email = row["email"].ToString();
+                string clinicName = row["clinicName"].ToString();
+                string clinicType = row["clinicType"].ToString();
+                TimeSpan startTime = TimeSpan.Parse(row["startTime"].ToString());
+                TimeSpan endTime = TimeSpan.Parse(row["endTime"].ToString());
+
+                Clinic obj = new Clinic(clinicId, address, phoneNum, email, clinicName, clinicType, startTime, endTime);
+                clinicList.Add(obj);
+            }
+            return clinicList;
         }
     }
 }

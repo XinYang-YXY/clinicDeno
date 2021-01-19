@@ -14,4 +14,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Clinic" nillable="true" type="tns:Clinic" />
+  <xs:complexType name="ArrayOfClinic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Clinic" nillable="true" type="tns:Clinic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClinic" nillable="true" type="tns:ArrayOfClinic" />
 </xs:schema>
