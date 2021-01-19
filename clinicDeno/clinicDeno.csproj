@@ -61,9 +61,6 @@
     <Reference Include="FluentEmail.Core, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentEmail.Core.2.9.0\lib\netstandard2.0\FluentEmail.Core.dll</HintPath>
     </Reference>
-    <Reference Include="FluentEmail.SendGrid, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentEmail.SendGrid.2.9.0\lib\netstandard2.0\FluentEmail.SendGrid.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.4\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
@@ -77,8 +74,11 @@
     <Reference Include="MySqlConnector, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
       <HintPath>..\packages\MySqlConnector.1.2.1\lib\net471\MySqlConnector.dll</HintPath>
     </Reference>
-    <Reference Include="SendGrid, Version=9.15.1.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
-      <HintPath>..\packages\SendGrid.9.15.1\lib\net452\SendGrid.dll</HintPath>
+    <Reference Include="SendGrid, Version=9.22.0.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
+      <HintPath>..\packages\SendGrid.9.22.0\lib\net452\SendGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="StarkbankEcdsa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\starkbank-ecdsa.1.2.0\lib\net452\StarkbankEcdsa.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
@@ -156,6 +156,7 @@
   <ItemGroup>
     <Content Include="AdminLogin.aspx" />
     <Content Include="AdminRegistration.aspx" />
+    <Content Include="AdminRegistrationSuccess.aspx" />
     <Content Include="ClinicRegistration.aspx" />
     <Content Include="ClinicRegistrationSuccess.aspx" />
     <Content Include="Connected Services\MyDenoDBServiceReference\clinicDeno.MyDenoDBServiceReference.Clinic.datasource">
@@ -346,6 +347,13 @@
     </Compile>
     <Compile Include="AdminRegistration.aspx.designer.cs">
       <DependentUpon>AdminRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRegistrationSuccess.aspx.cs">
+      <DependentUpon>AdminRegistrationSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminRegistrationSuccess.aspx.designer.cs">
+      <DependentUpon>AdminRegistrationSuccess.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />

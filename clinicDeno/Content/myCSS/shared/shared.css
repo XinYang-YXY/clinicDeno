@@ -86,6 +86,9 @@
 .box-mobile{
     max-width:310px;
 }
+.box-mobile-400{
+    max-width:400px;
+}
 
 .box-success{
     max-width:700px;

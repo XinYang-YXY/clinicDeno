@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdminRegistration.aspx.cs" Inherits="clinicDeno.AdminRegistration" %>
+﻿<%@ Page  Async="true"  Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdminRegistration.aspx.cs" Inherits="clinicDeno.AdminRegistration" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -44,7 +44,7 @@
                         <%-- <option value="male" class="standard-inputField" data-value="male">Male</option>
                         <option value="female" class="standard-inputField" data-value="female">Female</option>--%>
                     </select>
-                <asp:TextBox ID="AdminEmail" runat="server" class="standard-inputField" type="text" placeholder="Email" required="true" /></asp:TextBox>
+                <asp:TextBox ID="AdminEmail" runat="server" class="standard-inputField" type="email" placeholder="Email" required="true" /></asp:TextBox>
                 <asp:TextBox ID="AdminPassword" runat="server" class="standard-inputField" type="password" placeholder="Password" required="true" /></asp:TextBox>
             </section>
 
