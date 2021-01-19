@@ -81,7 +81,10 @@ CREATE TABLE `heDeno`.`ClinicAdmin` (
 SET FOREIGN_KEY_CHECKS=0;
 ALTER TABLE `heDeno`.`ClinicAdmin` 
 CHANGE COLUMN `id` `id` INT(11) NOT NULL AUTO_INCREMENT ;
-SET FOREIGN_KEY_CHECKS=1;     
+SET FOREIGN_KEY_CHECKS=1; 
+/* === Column Changes By XinYang === */  
+ALTER TABLE `heDeno`.`ClinicAdmin` 
+ADD COLUMN `verified` VARCHAR(45) NULL DEFAULT 0 AFTER `clinicId`; 
 
 /* Appointment */
 CREATE TABLE `heDeno`.`Appointment` (
