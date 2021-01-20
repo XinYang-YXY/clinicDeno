@@ -67,7 +67,6 @@ C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\Newtonsoft.Json.xml
 C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\Antlr3.Runtime.pdb
 C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\yxy\Desktop\clinicDeno\clinicDeno\obj\Debug\clinicDeno.csprojAssemblyReference.cache
 C:\Users\yxy\Desktop\clinicDeno\clinicDeno\obj\Debug\clinicDeno.csproj.CoreCompileInputs.cache
 C:\Users\yxy\Desktop\clinicDeno\clinicDeno\obj\Debug\clinicDeno.csproj.CopyComplete
 C:\Users\yxy\Desktop\clinicDeno\clinicDeno\obj\Debug\clinicDeno.dll

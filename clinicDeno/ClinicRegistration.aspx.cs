@@ -1,4 +1,5 @@
-﻿using System;
+﻿using clinicDeno.MyDenoDBServiceReference;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,13 +23,24 @@ namespace clinicDeno
             string clinicType = ClinicTypeNET.Text.ToString();
             string clinicEmail = ClinicEmail.Text.ToString();
             string clinicPhoneNum = ClinicNum.Text.ToString();
-            TimeSpan clinicStartTime =  TimeSpan.Parse(ClinicStartTime.Text.ToString());
+            TimeSpan clinicStartTime = TimeSpan.Parse(ClinicStartTime.Text.ToString());
             TimeSpan clinicEndTime = TimeSpan.Parse(ClinicEndTime.Text.ToString());
             String clinicAddress = ClinicAddressNET.Text.ToString();
 
-            client.CreateClinic(clinicAddress, clinicPhoneNum, clinicEmail, clinicName, clinicType, clinicStartTime, clinicEndTime);
+            Clinic workingClinic = client.GetClinicByName(clinicName);
 
-            Response.Redirect("~/ClinicRegistrationSuccess.aspx");
+            if (workingClinic != null)
+            {
+                client.CreateClinic(clinicAddress, clinicPhoneNum, clinicEmail, clinicName, clinicType, clinicStartTime, clinicEndTime);
+                Response.Redirect("~/ClinicRegistrationSuccess.aspx");
+            } else
+            {
+                ClinicName.Attributes.Remove("placeholder");
+                ClinicName.Attributes.Add("placeholder", "Clinic name has been taken");
+                ClinicName.Text = "";
+                ClinicName.Style.Add("border", " red 1px solid");
+            }
+
 
         }
     }
