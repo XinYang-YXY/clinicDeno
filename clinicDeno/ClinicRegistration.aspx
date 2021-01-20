@@ -10,7 +10,10 @@
                 <div class="inputHeader-row">
                     <p class="montserrat grey-blue-second bold-font">* All fields are required</p>
                 </div>
+                <div>
                 <asp:TextBox ID="ClinicName" runat="server"  class="standard-inputField" type="text" placeholder="Clinic Name" required="true"/></asp:TextBox>
+
+                </div>
 
                 <asp:TextBox ID="ClinicTypeNET" runat="server" Class="html-hidden"></asp:TextBox>
                 <select id="ClinicType" class="standard-inputField" required>

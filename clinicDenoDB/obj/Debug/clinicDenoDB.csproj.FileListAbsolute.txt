@@ -19,7 +19,6 @@ C:\Users\yxy\Desktop\clinicDeno\clinicDenoDB\bin\Debug\System.Memory.xml
 C:\Users\yxy\Desktop\clinicDeno\clinicDenoDB\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\yxy\Desktop\clinicDeno\clinicDenoDB\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\yxy\Desktop\clinicDeno\clinicDenoDB\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\yxy\Desktop\clinicDeno\clinicDenoDB\obj\Debug\clinicDenoDB.csprojAssemblyReference.cache
 C:\Users\yxy\Desktop\clinicDeno\clinicDenoDB\obj\Debug\clinicDenoDB.csproj.CoreCompileInputs.cache
 C:\Users\yxy\Desktop\clinicDeno\clinicDenoDB\obj\Debug\clinicDenoDB.csproj.CopyComplete
 C:\Users\yxy\Desktop\clinicDeno\clinicDenoDB\obj\Debug\clinicDenoDB.dll
