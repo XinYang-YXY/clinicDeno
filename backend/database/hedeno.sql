@@ -109,7 +109,9 @@ CREATE TABLE `heDeno`.`Appointment` (
 /* === Column Changes By FangJun === */
 ALTER TABLE `hedeno`.`appointment` 
 CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT ;
-
+/* === Column Changes By FangJun === */
+ALTER TABLE `hedeno`.`appointment` 
+DROP COLUMN `endDateTime`;
 
 /* Medical Record */
 CREATE TABLE `heDeno`.`MedicalRecord` (
