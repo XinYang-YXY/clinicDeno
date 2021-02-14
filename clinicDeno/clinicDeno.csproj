@@ -154,6 +154,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminDashboard_Home.aspx" />
     <Content Include="AdminLogin.aspx" />
     <Content Include="AdminRegistration.aspx" />
     <Content Include="AdminRegistrationSuccess.aspx" />
@@ -189,6 +190,7 @@
     <Content Include="CustomError\HTTP404.html" />
     <Content Include="Default.aspx" />
     <Content Include="DoctorLogin.aspx" />
+    <Content Include="EmailVerification.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -337,6 +339,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDashboard_Home.aspx.cs">
+      <DependentUpon>AdminDashboard_Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard_Home.aspx.designer.cs">
+      <DependentUpon>AdminDashboard_Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -392,6 +401,13 @@
     </Compile>
     <Compile Include="DoctorLogin.aspx.designer.cs">
       <DependentUpon>DoctorLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailVerification.aspx.cs">
+      <DependentUpon>EmailVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailVerification.aspx.designer.cs">
+      <DependentUpon>EmailVerification.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

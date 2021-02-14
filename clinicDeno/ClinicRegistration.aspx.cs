@@ -29,7 +29,7 @@ namespace clinicDeno
 
             Clinic workingClinic = client.GetClinicByName(clinicName);
 
-            if (workingClinic != null)
+            if (workingClinic ==  null)
             {
                 client.CreateClinic(clinicAddress, clinicPhoneNum, clinicEmail, clinicName, clinicType, clinicStartTime, clinicEndTime);
                 Response.Redirect("~/ClinicRegistrationSuccess.aspx");

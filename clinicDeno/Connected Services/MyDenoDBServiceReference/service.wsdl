@@ -44,6 +44,18 @@
   <wsdl:message name="IService1_CreateClinicAdmin_OutputMessage">
     <wsdl:part name="parameters" element="tns:CreateClinicAdminResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_UpdateAdminVerifyStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdminVerifyStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateAdminVerifyStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdminVerifyStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AdminLoginVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdminLoginVerify" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AdminLoginVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdminLoginVerifyResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -68,6 +80,14 @@
     <wsdl:operation name="CreateClinicAdmin">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateClinicAdmin" message="tns:IService1_CreateClinicAdmin_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateClinicAdminResponse" message="tns:IService1_CreateClinicAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdminVerifyStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateAdminVerifyStatus" message="tns:IService1_UpdateAdminVerifyStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateAdminVerifyStatusResponse" message="tns:IService1_UpdateAdminVerifyStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdminLoginVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AdminLoginVerify" message="tns:IService1_AdminLoginVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AdminLoginVerifyResponse" message="tns:IService1_AdminLoginVerify_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -119,6 +139,24 @@
     </wsdl:operation>
     <wsdl:operation name="CreateClinicAdmin">
       <soap:operation soapAction="http://tempuri.org/IService1/CreateClinicAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdminVerifyStatus">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateAdminVerifyStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminLoginVerify">
+      <soap:operation soapAction="http://tempuri.org/IService1/AdminLoginVerify" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

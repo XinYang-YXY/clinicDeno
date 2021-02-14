@@ -4,6 +4,7 @@
 
     <section class="vertical-middle-landing">
         <div class="box-style box-mobile-400 item-center">
+            <asp:Label ID="loginMsg" runat="server" Text="" class="alert " Visible="False"></asp:Label>
             <h2 class="montserrat grey-blue-second medium-font">Administrator Login</h2>
             <section class="layout-inputField mb-3 mt-5">
                 <div class="inputHeader-row">

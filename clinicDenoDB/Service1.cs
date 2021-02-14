@@ -18,16 +18,27 @@ namespace clinicDenoDB
             return clinic.Insert();
         }
 
-        public int CreateClinicAdmin(string email, string phoneNum, string firstName, string lastName, DateTime dob, string gender, string password, string clinicId)
+        public int CreateClinicAdmin(string email, string phoneNum, string firstName, string lastName, DateTime dob, string gender, string password, string clinicId, string verificationId)
         {
-            ClinicAdmin clinicAdmin = new ClinicAdmin(email, phoneNum, firstName, lastName, dob, gender, password, clinicId);
+            ClinicAdmin clinicAdmin = new ClinicAdmin(email, phoneNum, firstName, lastName, dob, gender, password, clinicId, verificationId);
             return clinicAdmin.Insert();
         }
+        public void UpdateAdminVerifyStatus(string verificationId)
+        {
+            ClinicAdmin clinicAdmin = new ClinicAdmin();
+            clinicAdmin.UpdateVerificationStatus(verificationId);
+        }
+        public string AdminLoginVerify(string email, string password)
+        {
+            ClinicAdmin clinicAdmin = new ClinicAdmin();
+            return clinicAdmin.AdminLoginVerify(email, password);
+        }
+
 
         public List<Clinic> GetAllClinic()
         {
-                Clinic clinic = new Clinic();
-                return clinic.SelectAll();
+            Clinic clinic = new Clinic();
+            return clinic.SelectAll();
         }
 
         public Clinic GetClinicByName(string givenClinicName)
@@ -54,5 +65,5 @@ namespace clinicDenoDB
             return composite;
         }
 
-          }
+    }
 }
