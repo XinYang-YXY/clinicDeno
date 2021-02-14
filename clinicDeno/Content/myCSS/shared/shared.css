@@ -54,6 +54,9 @@
 .margin-t-16{
     margin-top:16px;
 }
+.margin-b-16{
+    margin-bottom:16px;
+}
 
 .html-hidden{
     display: none;
@@ -103,3 +106,41 @@
 .item-center{
     text-align:center;
 }
+
+.em-2{
+    font-size:2em;
+}
+
+
+/* Alert CSS Style*/
+.alert-ok {
+    background-color: rgb(92, 115, 242) !important;
+    color: white;
+    border-color: rgb(92, 115, 242) !important;
+    border-radius: 0.25em;
+    display: block;
+    max-width: 100%;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.alert-warn {
+    background-color: rgb(209, 26, 42) !important;
+    color: white;
+    border-color: rgb(209, 26, 42) !important;
+    border-radius: 0.25em;
+    display: block;
+    max-width: 100%;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+/* Logout menu button*/
+.del-border-bg{
+    border:none;
+    background-color: white;
+}
+.del-border-bg:focus{
+border:none;
+outline-color:white;
+}
+

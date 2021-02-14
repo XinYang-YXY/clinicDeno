@@ -51,10 +51,12 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
 
-                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-home" runat="server" href="~/">Home</a>
-                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-clinic" runat="server" href="~/ClinicRegistration">Clinic Registration</a>
-                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-doctor" runat="server" href="~/DoctorLogin">Doctor</a>
-                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-admin" runat="server" href="~/AdminLogin">Administrator</a>
+                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-home" runat="server" href="~/" id="homeMenuBtn">Home</a>
+                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-clinic" runat="server" href="~/ClinicRegistration" id="clinicMenuBtn">Clinic Registration</a>
+                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-doctor" runat="server" href="~/DoctorLogin" id="doctorMenuBtn">Doctor</a>
+                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-admin" runat="server" href="~/AdminLogin" id="adminMenuBtn">Administrator</a>
+
+                    <asp:Button ID="logoutMenuBtn" runat="server" Text="Logout"  class="nav-link grey-blue navigation-opacity montserrat nav-admin-logout del-border-bg"  Visible="False" OnClick="logoutMenuBtn_Click" />
                 </div>
             </div>
         </nav>

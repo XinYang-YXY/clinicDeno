@@ -23,3 +23,4 @@ C:\Users\yxy\Desktop\clinicDeno\clinicDenoDB\obj\Debug\clinicDenoDB.csproj.CoreC
 C:\Users\yxy\Desktop\clinicDeno\clinicDenoDB\obj\Debug\clinicDenoDB.csproj.CopyComplete
 C:\Users\yxy\Desktop\clinicDeno\clinicDenoDB\obj\Debug\clinicDenoDB.dll
 C:\Users\yxy\Desktop\clinicDeno\clinicDenoDB\obj\Debug\clinicDenoDB.pdb
+C:\Users\yxy\Desktop\clinicDeno\clinicDenoDB\obj\Debug\clinicDenoDB.csprojAssemblyReference.cache

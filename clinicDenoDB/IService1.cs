@@ -26,7 +26,11 @@ namespace clinicDenoDB
         [OperationContract]
         List<Clinic> GetAllClinic();
         [OperationContract]
-        int CreateClinicAdmin(string email, string phoneNum, string firstName, string lastName, DateTime dob, string gender, string password, string clinicId);
+        int CreateClinicAdmin(string email, string phoneNum, string firstName, string lastName, DateTime dob, string gender, string password, string clinicId, string verificationId);
+        [OperationContract]
+        void UpdateAdminVerifyStatus(string verificationId);
+        [OperationContract]
+        string AdminLoginVerify(string email, string password);
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

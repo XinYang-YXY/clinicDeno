@@ -266,10 +266,22 @@ namespace clinicDeno.MyDenoDBServiceReference {
         System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Clinic[]> GetAllClinicAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateClinicAdmin", ReplyAction="http://tempuri.org/IService1/CreateClinicAdminResponse")]
-        int CreateClinicAdmin(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string password, string clinicId);
+        int CreateClinicAdmin(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string password, string clinicId, string verificationId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateClinicAdmin", ReplyAction="http://tempuri.org/IService1/CreateClinicAdminResponse")]
-        System.Threading.Tasks.Task<int> CreateClinicAdminAsync(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string password, string clinicId);
+        System.Threading.Tasks.Task<int> CreateClinicAdminAsync(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string password, string clinicId, string verificationId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateAdminVerifyStatus", ReplyAction="http://tempuri.org/IService1/UpdateAdminVerifyStatusResponse")]
+        void UpdateAdminVerifyStatus(string verificationId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateAdminVerifyStatus", ReplyAction="http://tempuri.org/IService1/UpdateAdminVerifyStatusResponse")]
+        System.Threading.Tasks.Task UpdateAdminVerifyStatusAsync(string verificationId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AdminLoginVerify", ReplyAction="http://tempuri.org/IService1/AdminLoginVerifyResponse")]
+        string AdminLoginVerify(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AdminLoginVerify", ReplyAction="http://tempuri.org/IService1/AdminLoginVerifyResponse")]
+        System.Threading.Tasks.Task<string> AdminLoginVerifyAsync(string email, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -339,12 +351,28 @@ namespace clinicDeno.MyDenoDBServiceReference {
             return base.Channel.GetAllClinicAsync();
         }
         
-        public int CreateClinicAdmin(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string password, string clinicId) {
-            return base.Channel.CreateClinicAdmin(email, phoneNum, firstName, lastName, dob, gender, password, clinicId);
+        public int CreateClinicAdmin(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string password, string clinicId, string verificationId) {
+            return base.Channel.CreateClinicAdmin(email, phoneNum, firstName, lastName, dob, gender, password, clinicId, verificationId);
         }
         
-        public System.Threading.Tasks.Task<int> CreateClinicAdminAsync(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string password, string clinicId) {
-            return base.Channel.CreateClinicAdminAsync(email, phoneNum, firstName, lastName, dob, gender, password, clinicId);
+        public System.Threading.Tasks.Task<int> CreateClinicAdminAsync(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string password, string clinicId, string verificationId) {
+            return base.Channel.CreateClinicAdminAsync(email, phoneNum, firstName, lastName, dob, gender, password, clinicId, verificationId);
+        }
+        
+        public void UpdateAdminVerifyStatus(string verificationId) {
+            base.Channel.UpdateAdminVerifyStatus(verificationId);
+        }
+        
+        public System.Threading.Tasks.Task UpdateAdminVerifyStatusAsync(string verificationId) {
+            return base.Channel.UpdateAdminVerifyStatusAsync(verificationId);
+        }
+        
+        public string AdminLoginVerify(string email, string password) {
+            return base.Channel.AdminLoginVerify(email, password);
+        }
+        
+        public System.Threading.Tasks.Task<string> AdminLoginVerifyAsync(string email, string password) {
+            return base.Channel.AdminLoginVerifyAsync(email, password);
         }
     }
 }
