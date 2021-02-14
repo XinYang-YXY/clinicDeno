@@ -1,6 +1,6 @@
 /* Patient */
 CREATE TABLE `heDeno`.`Patient` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `secretId` VARCHAR(100) NOT NULL,
   `email` VARCHAR(100) NOT NULL UNIQUE,
   `isEmailVerified` TINYINT NOT NULL DEFAULT 0,
