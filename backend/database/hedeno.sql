@@ -112,6 +112,10 @@ CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT ;
 /* === Column Changes By FangJun === */
 ALTER TABLE `hedeno`.`appointment` 
 DROP COLUMN `endDateTime`;
+/* === Column Changes By FangJun === */
+ALTER TABLE `hedeno`.`appointment` 
+ADD COLUMN `time` TIME NOT NULL AFTER `date`,
+CHANGE COLUMN `startDateTime` `date` VARCHAR(45) NOT NULL ;
 
 /* Medical Record */
 CREATE TABLE `heDeno`.`MedicalRecord` (
