@@ -112,13 +112,13 @@ CREATE TABLE `heDeno`.`Appointment` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 /* === Column Changes By FangJun === */
-ALTER TABLE `hedeno`.`appointment` 
+ALTER TABLE `heDeno`.`appointment` 
 CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT ;
 /* === Column Changes By FangJun === */
-ALTER TABLE `hedeno`.`appointment` 
+ALTER TABLE `heDeno`.`appointment` 
 DROP COLUMN `endDateTime`;
 /* === Column Changes By FangJun === */
-ALTER TABLE `hedeno`.`appointment` 
+ALTER TABLE `heDeno`.`appointment` 
 ADD COLUMN `time` TIME NOT NULL AFTER `date`,
 CHANGE COLUMN `startDateTime` `date` VARCHAR(45) NOT NULL ;
 
@@ -153,22 +153,22 @@ CREATE TABLE `heDeno`.`MedicalRecord` (
     ON UPDATE NO ACTION);
 
 /* === New Specialty Table By Fang Jun === */
-CREATE TABLE `hedeno`.`specialty` (
+CREATE TABLE `heDeno`.`specialty` (
   `specialtyName` VARCHAR(45) NOT NULL,
   `specialtyDesc` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`specialtyName`));
-INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Cardiology', 'Heart related');
-INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Dermatology', 'Skin related');
-INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Endocrinology', 'idk');
-INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Diagnostic Radiology', 'MRI');
-INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Gastroenterology', 'Digestive system related');
-INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('General Surgery', 'Abdominal related');
-INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Haematology', 'Blood related');
-INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Neurology', 'Nervous system related');
-INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Ophthalmology', 'Eye related');
-INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Pathology', 'Disease related');
-INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Plastic Surgery', 'Alteration of human body');
-INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Psychiatry', 'Mental related');
-INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Rheumatology', 'Bone/Muscle related');
-INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Urology', 'Urine related');
+INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Cardiology', 'Heart related');
+INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Dermatology', 'Skin related');
+INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Endocrinology', '');
+INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Diagnostic Radiology', 'MRI');
+INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Gastroenterology', 'Digestive system related');
+INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('General Surgery', 'Abdominal related');
+INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Haematology', 'Blood related');
+INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Neurology', 'Nervous system related');
+INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Ophthalmology', 'Eye related');
+INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Pathology', 'Disease related');
+INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Plastic Surgery', 'Alteration of human body');
+INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Psychiatry', 'Mental related');
+INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Rheumatology', 'Bone/Muscle related');
+INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Urology', 'Urine related');
 
