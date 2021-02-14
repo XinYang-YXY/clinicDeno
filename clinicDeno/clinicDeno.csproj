@@ -184,6 +184,9 @@
     <Content Include="Content\myCSS\shared\position.css" />
     <Content Include="Content\myCSS\shared\shared.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CustomError\GenericError.html" />
+    <Content Include="CustomError\HTTP403.html" />
+    <Content Include="CustomError\HTTP404.html" />
     <Content Include="Default.aspx" />
     <Content Include="DoctorLogin.aspx" />
     <Content Include="favicon.ico" />

@@ -96,3 +96,4 @@ C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\StarkbankEcdsa.dll
 C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
 C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\SendGrid.pdb
 C:\Users\yxy\Desktop\clinicDeno\clinicDeno\bin\SendGrid.xml
+C:\Users\yxy\Desktop\clinicDeno\clinicDeno\obj\Debug\clinicDeno.csprojAssemblyReference.cache
