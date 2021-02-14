@@ -154,7 +154,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminDashboard_AppointmentReminder.aspx" />
+    <Content Include="AdminDashboard_AppointmentRequests.aspx" />
     <Content Include="AdminDashboard_Home.aspx" />
+    <Content Include="AdminDashboard_MedicalInstruction.aspx" />
+    <Content Include="AdminDashboard_PatientRecord.aspx" />
+    <Content Include="AdminDashboard_UpcomingAppointment.aspx" />
     <Content Include="AdminLogin.aspx" />
     <Content Include="AdminRegistration.aspx" />
     <Content Include="AdminRegistrationSuccess.aspx" />
@@ -178,6 +183,13 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\myCSS\clinicAdminDashboard\appointmentReminder.css" />
+    <Content Include="Content\myCSS\clinicAdminDashboard\appointmentRequests.css" />
+    <Content Include="Content\myCSS\clinicAdminDashboard\home.css" />
+    <Content Include="Content\myCSS\clinicAdminDashboard\medicalInstruction.css" />
+    <Content Include="Content\myCSS\clinicAdminDashboard\patientRecord.css" />
+    <Content Include="Content\myCSS\clinicAdminDashboard\shared.css" />
+    <Content Include="Content\myCSS\clinicAdminDashboard\upcomingAppointment.css" />
     <Content Include="Content\myCSS\shared\button.css" />
     <Content Include="Content\myCSS\shared\icon.css" />
     <Content Include="Content\myCSS\shared\inputField.css" />
@@ -339,12 +351,47 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDashboard_AppointmentReminder.aspx.cs">
+      <DependentUpon>AdminDashboard_AppointmentReminder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard_AppointmentReminder.aspx.designer.cs">
+      <DependentUpon>AdminDashboard_AppointmentReminder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard_AppointmentRequests.aspx.cs">
+      <DependentUpon>AdminDashboard_AppointmentRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard_AppointmentRequests.aspx.designer.cs">
+      <DependentUpon>AdminDashboard_AppointmentRequests.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminDashboard_Home.aspx.cs">
       <DependentUpon>AdminDashboard_Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminDashboard_Home.aspx.designer.cs">
       <DependentUpon>AdminDashboard_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard_MedicalInstruction.aspx.cs">
+      <DependentUpon>AdminDashboard_MedicalInstruction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard_MedicalInstruction.aspx.designer.cs">
+      <DependentUpon>AdminDashboard_MedicalInstruction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard_PatientRecord.aspx.cs">
+      <DependentUpon>AdminDashboard_PatientRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard_PatientRecord.aspx.designer.cs">
+      <DependentUpon>AdminDashboard_PatientRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard_UpcomingAppointment.aspx.cs">
+      <DependentUpon>AdminDashboard_UpcomingAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard_UpcomingAppointment.aspx.designer.cs">
+      <DependentUpon>AdminDashboard_UpcomingAppointment.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>

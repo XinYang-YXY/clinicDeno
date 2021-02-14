@@ -19,7 +19,14 @@ namespace clinicDeno
                     clinicMenuBtn.Visible = false;
                     doctorMenuBtn.Visible = false;
                     adminMenuBtn.Visible = false;
+
                     logoutMenuBtn.Visible = true;
+                    homeAdminDashboardMenuBtn.Visible = true;
+                    appointmentRequestMenuBtn.Visible = true;
+                    upcomingAppointmentMenuBtn.Visible = true;
+                    ReminderMenuBtn.Visible = true;
+                    PatientRecordMenuBtn.Visible = true;
+                    MedInsMenuBtn.Visible = true;
                 }
             }
             else

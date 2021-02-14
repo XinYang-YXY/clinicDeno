@@ -20,6 +20,15 @@
     <link rel="stylesheet" href="~/Content/myCSS/shared/button.css">
     <link rel="stylesheet" href="~/Content/myCSS/shared/overrideBootstrap.css">
     <link rel="stylesheet" href="~/Content/myCSS/shared/inputField.css">
+
+    <%--    Clinic admind dashboard css --%>
+    <link rel="stylesheet" href="~/Content/myCSS/clinicAdminDashboard/appointmentReminder.css">
+    <link rel="stylesheet" href="~/Content/myCSS/clinicAdminDashboard/appointmentRequests.css">
+    <link rel="stylesheet" href="~/Content/myCSS/clinicAdminDashboard/home.css">
+    <link rel="stylesheet" href="~/Content/myCSS/clinicAdminDashboard/medicalInstruction.css">
+    <link rel="stylesheet" href="~/Content/myCSS/clinicAdminDashboard/patientRecord.css">
+    <link rel="stylesheet" href="~/Content/myCSS/clinicAdminDashboard/shared.css">
+    <link rel="stylesheet" href="~/Content/myCSS/clinicAdminDashboard/upcomingAppointment.css">
 </head>
 <body>
     <form runat="server">
@@ -46,17 +55,24 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand grey-blue montserrat font-weight-bold logo-opacity logo-size" runat="server" href="~/">ClinicDeno</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
 
-                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-home" runat="server" href="~/" id="homeMenuBtn">Home</a>
-                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-clinic" runat="server" href="~/ClinicRegistration" id="clinicMenuBtn">Clinic Registration</a>
-                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-doctor" runat="server" href="~/DoctorLogin" id="doctorMenuBtn">Doctor</a>
-                    <a  class="nav-link grey-blue navigation-opacity montserrat nav-admin" runat="server" href="~/AdminLogin" id="adminMenuBtn">Administrator</a>
+                    <a class="nav-link grey-blue navigation-opacity montserrat nav-home" runat="server" href="~/" id="homeMenuBtn">Home</a>
+                    <a class="nav-link grey-blue navigation-opacity montserrat nav-clinic" runat="server" href="~/ClinicRegistration" id="clinicMenuBtn">Clinic Registration</a>
+                    <a class="nav-link grey-blue navigation-opacity montserrat nav-doctor" runat="server" href="~/DoctorLogin" id="doctorMenuBtn">Doctor</a>
+                    <a class="nav-link grey-blue navigation-opacity montserrat nav-admin" runat="server" href="~/AdminLogin" id="adminMenuBtn">Administrator</a>
 
-                    <asp:Button ID="logoutMenuBtn" runat="server" Text="Logout"  class="nav-link grey-blue navigation-opacity montserrat nav-admin-logout del-border-bg"  Visible="False" OnClick="logoutMenuBtn_Click" />
+
+                    <a class="nav-link grey-blue navigation-opacity montserrat nav-admin-home" runat="server" href="~/AdminDashboard_Home" id="homeAdminDashboardMenuBtn" visible="False">Home</a>
+                    <a class="nav-link grey-blue navigation-opacity montserrat nav-admin-request" runat="server" href="~/AdminDashboard_AppointmentRequests" id="appointmentRequestMenuBtn" visible="False">Appointment Requests</a>
+                    <a class="nav-link grey-blue navigation-opacity montserrat nav-admin-upcoming" runat="server" href="~/AdminDashboard_UpcomingAppointment" id="upcomingAppointmentMenuBtn" visible="False">Upcoming Appointment</a>
+                    <a class="nav-link grey-blue navigation-opacity montserrat nav-admin-reminder" runat="server" href="~/AdminDashboard_AppointmentReminder" id="ReminderMenuBtn" visible="False">Reminder Setting</a>
+                    <a class="nav-link grey-blue navigation-opacity montserrat nav-admin-record" runat="server" href="~/AdminDashboard_PatientRecord" id="PatientRecordMenuBtn" visible="False">Patient's Records</a>
+                    <a class="nav-link grey-blue navigation-opacity montserrat nav-admin-medIns" runat="server" href="~/AdminDashboard_MedicalInstruction" id="MedInsMenuBtn" visible="False">Medical Instruction</a>
+                    <asp:Button ID="logoutMenuBtn" runat="server" Text="Logout" class="nav-link grey-blue navigation-opacity montserrat nav-admin-logout del-border-bg" Visible="False" OnClick="logoutMenuBtn_Click" />
                 </div>
             </div>
         </nav>
