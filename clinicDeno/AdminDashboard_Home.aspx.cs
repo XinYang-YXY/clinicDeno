@@ -27,5 +27,30 @@ namespace clinicDeno
                 Response.Redirect("AdminLogin.aspx", false);
             }
         }
+
+        protected void appReqBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminDashboard_AppointmentRequests.aspx");
+        }
+
+        protected void appUpBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminDashboard_UpcomingAppointment.aspx");
+        }
+
+        protected void appReminderBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminDashboard_AppointmentReminder.aspx");
+        }
+
+        protected void patientRecordBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminDashboard_PatientRecord.aspx");
+        }
+
+        protected void medicalInsBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminDashboard_MedicalInstruction.aspx");
+        }
     }
 }

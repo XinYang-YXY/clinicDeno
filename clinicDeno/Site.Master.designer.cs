@@ -51,6 +51,60 @@ namespace clinicDeno
         protected global::System.Web.UI.HtmlControls.HtmlAnchor adminMenuBtn;
 
         /// <summary>
+        /// homeAdminDashboardMenuBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor homeAdminDashboardMenuBtn;
+
+        /// <summary>
+        /// appointmentRequestMenuBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor appointmentRequestMenuBtn;
+
+        /// <summary>
+        /// upcomingAppointmentMenuBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor upcomingAppointmentMenuBtn;
+
+        /// <summary>
+        /// ReminderMenuBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor ReminderMenuBtn;
+
+        /// <summary>
+        /// PatientRecordMenuBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor PatientRecordMenuBtn;
+
+        /// <summary>
+        /// MedInsMenuBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor MedInsMenuBtn;
+
+        /// <summary>
         /// logoutMenuBtn control.
         /// </summary>
         /// <remarks>
