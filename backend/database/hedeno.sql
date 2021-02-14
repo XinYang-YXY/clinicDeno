@@ -3,6 +3,7 @@ CREATE TABLE `heDeno`.`Patient` (
   `id` INT NOT NULL,
   `secretId` VARCHAR(100) NOT NULL,
   `email` VARCHAR(100) NOT NULL UNIQUE,
+  `emailConfirmed` TINYINT NOT NULL DEFAULT 0,
   `phoneNum` VARCHAR(45) NOT NULL,
   `firstName` VARCHAR(45) NOT NULL,
   `lastName` VARCHAR(45) NOT NULL,
