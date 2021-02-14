@@ -85,6 +85,10 @@ SET FOREIGN_KEY_CHECKS=1;
 /* === Column Changes By XinYang === */  
 ALTER TABLE `heDeno`.`ClinicAdmin` 
 ADD COLUMN `verified` VARCHAR(45) NULL DEFAULT 0 AFTER `clinicId`; 
+/* === Column Changes By XinYang === */  
+ALTER TABLE `heDeno`.`ClinicAdmin` 
+ADD COLUMN `verificationId` VARCHAR(1000) NULL AFTER `verified`;
+
 
 /* Appointment */
 CREATE TABLE `heDeno`.`Appointment` (
