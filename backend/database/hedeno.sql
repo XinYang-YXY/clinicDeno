@@ -11,6 +11,10 @@ CREATE TABLE `heDeno`.`Patient` (
   `gender` VARCHAR(45) NOT NULL,
   `password` VARCHAR(1000) NOT NULL,
   PRIMARY KEY (`id`));
+/* === Column Changes By XinYang === */  
+  ALTER TABLE `heDeno`.`Patient` 
+ADD COLUMN `NRIC` VARCHAR(45) NOT NULL AFTER `password`;
+
 
 /* Clinic */
 CREATE TABLE `heDeno`.`Clinic` (
