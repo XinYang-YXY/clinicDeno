@@ -129,6 +129,13 @@ DROP COLUMN `endDateTime`;
 ALTER TABLE `heDeno`.`appointment` 
 ADD COLUMN `time` TIME NOT NULL AFTER `date`,
 CHANGE COLUMN `startDateTime` `date` VARCHAR(45) NOT NULL ;
+ALTER TABLE `heDeno`.`Appointment` 
+ADD COLUMN `status` VARCHAR(45) NOT NULL AFTER `patientId`;
+/* === Column Changes By XinYang === */
+ALTER TABLE `heDeno`.`Appointment` 
+ADD COLUMN `status` VARCHAR(45) NOT NULL AFTER `patientId`;
+ALTER TABLE `heDeno`.`Appointment` 
+CHANGE COLUMN `status` `status` VARCHAR(45) NOT NULL DEFAULT 0 ;
 
 /* Medical Record */
 CREATE TABLE `heDeno`.`MedicalRecord` (
