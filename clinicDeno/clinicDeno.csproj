@@ -161,6 +161,7 @@
     <Content Include="AdminDashboard_PatientRecord.aspx" />
     <Content Include="AdminDashboard_Request_Details.aspx" />
     <Content Include="AdminDashboard_UpcomingAppointment.aspx" />
+    <Content Include="AdminDashboard_Upcoming_Details.aspx" />
     <Content Include="AdminLogin.aspx" />
     <Content Include="AdminRegistration.aspx" />
     <Content Include="AdminRegistrationSuccess.aspx" />
@@ -410,6 +411,13 @@
     </Compile>
     <Compile Include="AdminDashboard_UpcomingAppointment.aspx.designer.cs">
       <DependentUpon>AdminDashboard_UpcomingAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard_Upcoming_Details.aspx.cs">
+      <DependentUpon>AdminDashboard_Upcoming_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard_Upcoming_Details.aspx.designer.cs">
+      <DependentUpon>AdminDashboard_Upcoming_Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>

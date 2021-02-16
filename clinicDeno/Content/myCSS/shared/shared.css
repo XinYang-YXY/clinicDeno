@@ -126,6 +126,10 @@
     max-width: 100%;
     margin-right: 30px;
     margin-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 600px;
+    margin: auto;
 }
 .alert-warn {
     background-color: rgb(209, 26, 42) !important;
