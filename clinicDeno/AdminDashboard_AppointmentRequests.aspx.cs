@@ -94,16 +94,19 @@ namespace clinicDeno
 
                     string entryInfo = "";
 
-                    if (i == eList.Count - 1)
+                    if (eList[i].Status == "0")
                     {
-                        entryInfo = eList[i].Id + "," + patientName + "," + eList[i].Date.ToString("dd/MM/yyyy");
-                    }
-                    else
-                    {
-                        entryInfo = eList[i].Id + "," + patientName + "," + eList[i].Date.ToString("dd/MM/yyyy") + "|";
+                        if (i == eList.Count - 1)
+                        {
+                            entryInfo = eList[i].Id + "," + patientName + "," + eList[i].Date.ToString("dd/MM/yyyy");
+                        }
+                        else
+                        {
+                            entryInfo = eList[i].Id + "," + patientName + "," + eList[i].Date.ToString("dd/MM/yyyy") + "|";
 
+                        }
+                        jsonString += entryInfo;
                     }
-                    jsonString += entryInfo;
 
 
                 }
