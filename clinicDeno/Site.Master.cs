@@ -19,6 +19,7 @@ namespace clinicDeno
                     clinicMenuBtn.Visible = false;
                     doctorMenuBtn.Visible = false;
                     adminMenuBtn.Visible = false;
+                    siteLogoPublic.Visible = false;
 
                     logoutMenuBtn.Visible = true;
                     homeAdminDashboardMenuBtn.Visible = true;
@@ -27,6 +28,7 @@ namespace clinicDeno
                     ReminderMenuBtn.Visible = true;
                     PatientRecordMenuBtn.Visible = true;
                     MedInsMenuBtn.Visible = true;
+                    siteLogoPrivate.Visible = true;
                 }
             }
             else

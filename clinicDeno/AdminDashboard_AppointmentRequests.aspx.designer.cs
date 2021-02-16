@@ -15,12 +15,30 @@ namespace clinicDeno
     {
 
         /// <summary>
-        /// Label1 control.
+        /// searchPatientNric control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.TextBox searchPatientNric;
+
+        /// <summary>
+        /// appointmentRequestSearchBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button appointmentRequestSearchBtn;
+
+        /// <summary>
+        /// JSONString control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox JSONString;
     }
 }

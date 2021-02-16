@@ -65,5 +65,47 @@ namespace clinicDenoDB
             return composite;
         }
 
+        public List<Appointment> GetAllAppointments()
+        {
+            Appointment appointment = new Appointment();
+            return appointment.SelectAll();
+        }
+        public List<Appointment> GetAppointmentByPatientId(string patientId)
+        {
+            Appointment appointment = new Appointment();
+            return appointment.GetAppointmentByPatientId(patientId);
+        }
+
+        
+
+        public Patient GetPatientById(string id)
+        {
+            Patient patient = new Patient();
+            return patient.GetById(id);
+        }
+
+        public string GetIdByNRIC(string nric)
+        {
+            Patient patient = new Patient();
+            return patient.GetIdByNRIC(nric);
+        }
+
+        public Appointment GetAppointmentById(string id)
+        {
+            Appointment appointment = new Appointment();
+            return appointment.GetAppointmentById(id);
+        }
+
+        public Doctor GetDoctorById(string id)
+        {
+            Doctor doctor = new Doctor();
+            return doctor.SelectById(id);
+        }
+
+        public void UpdateAppointmentStatus(string id, string newAppId)
+        {
+            Appointment appointment = new Appointment();
+            appointment.UpdateAppointmentStatus(id, newAppId);
+        }
     }
 }

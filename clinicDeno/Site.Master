@@ -20,8 +20,9 @@
     <link rel="stylesheet" href="~/Content/myCSS/shared/button.css">
     <link rel="stylesheet" href="~/Content/myCSS/shared/overrideBootstrap.css">
     <link rel="stylesheet" href="~/Content/myCSS/shared/inputField.css">
+    <link rel="stylesheet" href="~/Content/myCSS/shared/dashboardShared.css">
 
-    <%--    Clinic admind dashboard css --%>
+    <%--    Clinic admin dashboard css --%>
     <link rel="stylesheet" href="~/Content/myCSS/clinicAdminDashboard/appointmentReminder.css">
     <link rel="stylesheet" href="~/Content/myCSS/clinicAdminDashboard/appointmentRequests.css">
     <link rel="stylesheet" href="~/Content/myCSS/clinicAdminDashboard/home.css">
@@ -53,7 +54,8 @@
         </asp:ScriptManager>
 
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand grey-blue montserrat font-weight-bold logo-opacity logo-size" runat="server" href="~/">ClinicDeno</a>
+            <a class="navbar-brand grey-blue montserrat font-weight-bold logo-opacity logo-size" runat="server" href="~/" id="siteLogoPublic">ClinicDeno</a>
+            <a class="navbar-brand grey-blue montserrat font-weight-bold logo-opacity logo-size" runat="server" href="~/AdminDashboard_Home.aspx" id="siteLogoPrivate" visible="False">ClinicDeno</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
