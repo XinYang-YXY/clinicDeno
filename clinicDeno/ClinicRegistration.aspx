@@ -41,7 +41,7 @@
                  <textarea  id="ClinicAddress"  class="standard-inputField input-textarea" required></textarea>
             </section>
            <%-- <input type="submit"  value="Clinic Registration" class="montserrat rounded-full standard-btn btn-standard-width y-gap"/>--%>
-            <asp:Button ID="ClinicRegistrationBtn" runat="server" Text="Clinic Registration"  class="montserrat rounded-full standard-btn btn-standard-width y-gap" OnClick="ClinicRegistrationBtn_Click" />
+            <asp:Button ID="ClinicRegistrationBtn" runat="server" Text="Clinic Registration"  class="montserrat rounded-full standard-btn btn-standard-width y-gap " OnClick="ClinicRegistrationBtn_Click" />
 
         </div>
     </section>

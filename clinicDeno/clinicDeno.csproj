@@ -159,6 +159,7 @@
     <Content Include="AdminDashboard_Home.aspx" />
     <Content Include="AdminDashboard_MedicalInstruction.aspx" />
     <Content Include="AdminDashboard_PatientRecord.aspx" />
+    <Content Include="AdminDashboard_Request_Details.aspx" />
     <Content Include="AdminDashboard_UpcomingAppointment.aspx" />
     <Content Include="AdminLogin.aspx" />
     <Content Include="AdminRegistration.aspx" />
@@ -169,6 +170,15 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MyDenoDBServiceReference\clinicDeno.MyDenoDBServiceReference.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDenoDBServiceReference\clinicDeno.MyDenoDBServiceReference.Appointment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDenoDBServiceReference\clinicDeno.MyDenoDBServiceReference.Patient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDenoDBServiceReference\clinicDeno.MyDenoDBServiceReference.Doctor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\MyDenoDBServiceReference\configuration91.svcinfo" />
@@ -191,6 +201,7 @@
     <Content Include="Content\myCSS\clinicAdminDashboard\shared.css" />
     <Content Include="Content\myCSS\clinicAdminDashboard\upcomingAppointment.css" />
     <Content Include="Content\myCSS\shared\button.css" />
+    <Content Include="Content\myCSS\shared\dashboardShared.css" />
     <Content Include="Content\myCSS\shared\icon.css" />
     <Content Include="Content\myCSS\shared\inputField.css" />
     <Content Include="Content\myCSS\shared\overrideBootstrap.css" />
@@ -385,6 +396,13 @@
     </Compile>
     <Compile Include="AdminDashboard_PatientRecord.aspx.designer.cs">
       <DependentUpon>AdminDashboard_PatientRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard_Request_Details.aspx.cs">
+      <DependentUpon>AdminDashboard_Request_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard_Request_Details.aspx.designer.cs">
+      <DependentUpon>AdminDashboard_Request_Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminDashboard_UpcomingAppointment.aspx.cs">
       <DependentUpon>AdminDashboard_UpcomingAppointment.aspx</DependentUpon>

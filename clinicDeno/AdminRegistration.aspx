@@ -49,7 +49,7 @@
             </section>
 
 
-            <asp:Button ID="AdminRegistrationBtn" runat="server" Text="Clinic Registration" class="montserrat rounded-full standard-btn btn-standard-width y-gap" OnClick="ClinicRegistrationBtn_Click" />
+            <asp:Button ID="AdminRegistrationBtn" runat="server" Text="Administrator Registration" class="montserrat rounded-full standard-btn btn-standard-width y-gap" OnClick="ClinicRegistrationBtn_Click" />
 
             <a class="form-redirection-text montserrat" runat="server" href="~/AdminLogin.aspx">Already have an account? Login -></a>
 

@@ -1,0 +1,82 @@
+﻿.searchInput-position{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.rowEntry-layout{
+    display:flex;
+    justify-content:space-between;
+
+}
+.rowEntry-style{
+    background-color: rgba(130, 159, 217, 0.15);
+    border-radius:0.5em;
+    margin-bottom:16px;
+
+}
+
+.rowEntry-info-layout{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    width:50%;
+    text-align:center;
+    margin-top:auto !important;
+}
+.rowEntry-info-title{
+    width:50%;
+    color: rgba(35, 10, 89, 0.6);
+    font-weight: 600;
+}
+.rowEntry-info-cell{
+    width:50%;
+    color: rgba(35, 10, 89, 0.8);
+    font-weight:600;
+}
+.rowEntry-action-layout{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    width:30%;
+}
+
+.search-input-box{
+    border-top-right-radius:0em;
+    border-bottom-right-radius:0em;
+}
+
+/* Appoint detail shared CSS */
+.appointmentDetails-layout {
+    display: flex;
+    justify-content: space-between;
+    margin-top:80px;
+}
+.appointmentDetails-info-section-layout {
+    width: 50%;
+}
+.appointmentDetails-info-cell {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items:end;
+    width: 60%;
+    margin: auto;
+}
+
+.appointmentDetails-info-cell-title {
+    color: rgba(35, 10, 89, 0.6);
+    font-weight: 600;
+}
+.appointmentDetails-info-cell-content {
+    color: rgba(35, 10, 89, 0.8);
+    font-weight: 600;
+}
+.appointmentDetails-btn-layout{
+    text-align:right;
+    margin-right:50px;
+    margin-top: 200px;
+}
+
+.input-white{
+    border: white;
+    color: white;
+}

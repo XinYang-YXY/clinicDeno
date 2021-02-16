@@ -1,0 +1,110 @@
+﻿using clinicDeno.MyDenoDBServiceReference;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Mail;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace clinicDeno
+{
+    public partial class AdminDashboard_Request_Details : System.Web.UI.Page
+    {
+        string appointmentId = "";
+        string patientId = "";
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Request.QueryString["appointmentId"]))
+            {
+                //Label1.Text = Request.QueryString["patientId"];
+                appointmentId = Request.QueryString["appointmentId"];
+
+                MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+
+                Appointment appointment = client.GetAppointmentById(appointmentId);
+
+                string doctorId = appointment.DoctorId;
+                patientId = appointment.PatientId;
+                Doctor doctor = client.GetDoctorById(doctorId);
+                Patient patient = client.GetPatientById(patientId);
+
+                string appointmentDate = appointment.Date.ToString("dd/MM/yyyy");
+                string appointmentTime = appointment.Time.ToString();
+                //string patientName = 
+
+
+                appointmentRequestDoctor.Text = "DR " + doctor.FirstName + " " + doctor.LastName;
+                appointmentRequestDateTime.Text = appointmentDate + ", " + appointmentTime;
+
+                appointmentRequestPatientName.Text = patient.FirstName + " " + patient.LastName;
+                appointmentRequestPatientnric.Text = patient.Nric;
+                appointmentRequestPatientGender.Text = patient.Gender;
+                appointmentRequestPatientEmail.Text = patient.Email;
+                appointmentRequestPatientContactNum.Text = patient.PhoneNum;
+
+
+
+
+
+            }
+        }
+
+        protected void detailGoBackBtn_Click(object sender, EventArgs e)
+        {
+            string detailType = detailHeader.Text.Trim();
+            if (detailType == "request")
+            {
+                Response.Redirect("AdminDashboard_AppointmentRequests.aspx");
+            }
+        }
+
+        protected void AcceptBtn_Click(object sender, EventArgs e)
+        {
+            string feedback = appointmentDetailsAgreeFeedBackNET.Text.Trim();
+            MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+
+            var gmailAddress = Environment.GetEnvironmentVariable("GMAIL_ADDRESS");
+            var gmailPassword = Environment.GetEnvironmentVariable("GMAIL_PASSWORD");
+            MailMessage mail = new MailMessage();
+            mail.To.Add(appointmentRequestPatientEmail.Text.Trim());
+            mail.From = new MailAddress(gmailAddress);
+            mail.Subject = "[ClinicDeno] Appointment Request Accepted!";
+            mail.Body = $"Dear Mr {appointmentRequestPatientName.Text.Trim()},\n\nYour appointment request is accepted! \n\n{feedback} Thank you!" +  "\n\n\nRegards,\nClinicDeno Team";
+            SmtpClient smtp = new SmtpClient();
+            smtp.Host = "smtp.gmail.com";
+            smtp.Port = 587;
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = new System.Net.NetworkCredential(gmailAddress, gmailPassword);
+            smtp.EnableSsl = true;
+            smtp.Send(mail);
+
+            client.UpdateAppointmentStatus(appointmentId, "1");
+            Response.Redirect("AdminDashboard_AppointmentRequests.aspx");
+        }
+        protected void RejectBtn_Click(object sender, EventArgs e)
+        {
+            string feedback = appointmentDetailsRejectFeedBackNET.Text.Trim();
+            MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+
+
+            var gmailAddress = Environment.GetEnvironmentVariable("GMAIL_ADDRESS");
+            var gmailPassword = Environment.GetEnvironmentVariable("GMAIL_PASSWORD");
+            MailMessage mail = new MailMessage();
+            mail.To.Add(appointmentRequestPatientEmail.Text.Trim());
+            mail.From = new MailAddress(gmailAddress);
+            mail.Subject = "[ClinicDeno] Appointment Request Rejected";
+            mail.Body = $"Dear Mr {appointmentRequestPatientName.Text.Trim()},\n\nWe are sorry to tell you that your appointment is rejected. \n\n{feedback}" + "\n\n\nRegards,\nClinicDeno Team";
+            SmtpClient smtp = new SmtpClient();
+            smtp.Host = "smtp.gmail.com";
+            smtp.Port = 587;
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = new System.Net.NetworkCredential(gmailAddress, gmailPassword);
+            smtp.EnableSsl = true;
+            smtp.Send(mail);
+
+            client.UpdateAppointmentStatus(appointmentId, "2");
+            Response.Redirect("AdminDashboard_AppointmentRequests.aspx");
+        }
+    }
+}

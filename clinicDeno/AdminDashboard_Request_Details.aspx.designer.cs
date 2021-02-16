@@ -11,133 +11,124 @@ namespace clinicDeno
 {
 
 
-    public partial class SiteMaster
+    public partial class AdminDashboard_Request_Details
     {
 
         /// <summary>
-        /// siteLogoPublic control.
+        /// detailHeader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor siteLogoPublic;
+        protected global::System.Web.UI.WebControls.TextBox detailHeader;
 
         /// <summary>
-        /// siteLogoPrivate control.
+        /// detailGoBackBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor siteLogoPrivate;
+        protected global::System.Web.UI.WebControls.Button detailGoBackBtn;
 
         /// <summary>
-        /// homeMenuBtn control.
+        /// appointmentRequestDoctor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor homeMenuBtn;
+        protected global::System.Web.UI.WebControls.Label appointmentRequestDoctor;
 
         /// <summary>
-        /// clinicMenuBtn control.
+        /// appointmentRequestDateTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor clinicMenuBtn;
+        protected global::System.Web.UI.WebControls.Label appointmentRequestDateTime;
 
         /// <summary>
-        /// doctorMenuBtn control.
+        /// appointmentRequestPatientName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor doctorMenuBtn;
+        protected global::System.Web.UI.WebControls.Label appointmentRequestPatientName;
 
         /// <summary>
-        /// adminMenuBtn control.
+        /// appointmentRequestPatientnric control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor adminMenuBtn;
+        protected global::System.Web.UI.WebControls.Label appointmentRequestPatientnric;
 
         /// <summary>
-        /// homeAdminDashboardMenuBtn control.
+        /// appointmentRequestPatientGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor homeAdminDashboardMenuBtn;
+        protected global::System.Web.UI.WebControls.Label appointmentRequestPatientGender;
 
         /// <summary>
-        /// appointmentRequestMenuBtn control.
+        /// appointmentRequestPatientEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor appointmentRequestMenuBtn;
+        protected global::System.Web.UI.WebControls.Label appointmentRequestPatientEmail;
 
         /// <summary>
-        /// upcomingAppointmentMenuBtn control.
+        /// appointmentRequestPatientContactNum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor upcomingAppointmentMenuBtn;
+        protected global::System.Web.UI.WebControls.Label appointmentRequestPatientContactNum;
 
         /// <summary>
-        /// ReminderMenuBtn control.
+        /// appointmentDetailsAgreeFeedBackNET control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor ReminderMenuBtn;
+        protected global::System.Web.UI.WebControls.TextBox appointmentDetailsAgreeFeedBackNET;
 
         /// <summary>
-        /// PatientRecordMenuBtn control.
+        /// acceptBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor PatientRecordMenuBtn;
+        protected global::System.Web.UI.WebControls.Button acceptBtn;
 
         /// <summary>
-        /// MedInsMenuBtn control.
+        /// appointmentDetailsRejectFeedBackNET control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor MedInsMenuBtn;
+        protected global::System.Web.UI.WebControls.TextBox appointmentDetailsRejectFeedBackNET;
 
         /// <summary>
-        /// logoutMenuBtn control.
+        /// rejectBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button logoutMenuBtn;
-
-        /// <summary>
-        /// MainContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button rejectBtn;
     }
 }

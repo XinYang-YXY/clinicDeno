@@ -3,6 +3,10 @@
     width:260px;
 }
 
+.btn-smaller-width{
+    width:140px;
+}
+
 .standard-btn {
     background-color:rgba(0, 0, 0, 0);
     color: #5c73f2;
@@ -10,12 +14,60 @@
     outline:none;
     padding-top:6px;
     padding-bottom: 6px;
+    text-decoration:none !important;
 }
     .standard-btn:hover {
         background-color: #5c73f2;
         color: white;
         transition: all 0.5s ease-in-out;
     }
+    .standard-btn:focus{
+        outline:none;
+    }
+
+.alert-btn {
+    background-color: rgba(0, 0, 0, 0);
+    color: #D11A2A;
+    border: 2px solid #D11A2A;
+    outline: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-decoration: none !important;
+}
+
+    .alert-btn:hover {
+        background-color: #D11A2A;
+        color: white;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .alert-btn:focus {
+        outline: none;
+    }
+
+.goBackBtn-style {
+    background-color: rgba(0, 0, 0, 0);
+    color: #829FD9;
+    border: 2px solid #829FD9;
+    outline: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 60px;
+    margin-top: -50px !important;
+    text-decoration: none !important;
+}
+}
+.goBackBtn-style:hover {
+    background-color: #829FD9;
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+.goBackBtn-layout{
+    display: flex;
+    justify-content:left;
+}
 
 .rounded-full {
     border-radius: 9999px;
