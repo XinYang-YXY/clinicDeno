@@ -6,7 +6,7 @@
             <section class="layout-adminServices adminServices-section-gap">
                 <div>
                     <asp:Button ID="appReqBtn" runat="server" Text="❔" class="montserrat service-btn" OnClick="appReqBtn_Click" />
-                    <p class="montserrat service-name">Upcoming Appointments</p>
+                    <p class="montserrat service-name">Appointment Request</p>
                 </div>
                 <div>
                     <asp:Button ID="appUpBtn" runat="server" Text="📅" class="montserrat service-btn" OnClick="appUpBtn_Click"/>
