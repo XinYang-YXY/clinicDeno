@@ -99,6 +99,109 @@ ALTER TABLE `heDeno`.`ClinicAdmin`
 ADD COLUMN `verificationId` VARCHAR(1000) NULL AFTER `verified`;
 
 
+/* === New Medical Certificate Table By Qihan === */
+CREATE TABLE `heDeno`.`MC` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `startDate` DATE NOT NULL,
+  `endDate` DATE NOT NULL,
+  `comments` VARCHAR(1000),
+  `doctorId` INT NOT NULL,
+  `doctorSignature` VARCHAR(1000) NOT NULL,
+  `patientId` INT NOT NULL,
+  `appointmentId` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_MC_1_idx` (`doctorId` ASC) VISIBLE,
+  INDEX `fk_MC_2_idx` (`patientId` ASC) VISIBLE,
+  CONSTRAINT `fk_MC_1`
+    FOREIGN KEY (`doctorId`)
+    REFERENCES `heDeno`.`Doctor` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_MC_2`
+    FOREIGN KEY (`patientId`)
+    REFERENCES `heDeno`.`Patient` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+/* === New Medical Instruction Table By Qihan === */
+CREATE TABLE `heDeno`.`medicalInstruct` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `date` DATE NOT NULL,
+  `prescription` VARCHAR(100) NOT NULL,
+  `instruction` VARCHAR(100) NOT NULL,
+  `quantity` VARCHAR(100) NOT NULL,
+  `refills` VARCHAR(100) NOT NULL,
+  `doctorId` INT NOT NULL,
+  `patientId` INT NOT NULL,
+  `appointmentId` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_medicalInstruct_1_idx` (`doctorId` ASC) VISIBLE,
+  INDEX `fk_medicalInstruct_2_idx` (`patientId` ASC) VISIBLE,
+  CONSTRAINT `fk_medicalInstruct_1`
+    FOREIGN KEY (`doctorId`)
+    REFERENCES `heDeno`.`Doctor` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_medicalInstruct_2`
+    FOREIGN KEY (`patientId`)
+    REFERENCES `heDeno`.`Patient` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+    
+
+/* Medical Record */
+CREATE TABLE `heDeno`.`MedicalRecord` (
+  `id` INT NOT NULL,
+  `date` DATE NOT NULL,
+  `mc` VARCHAR(100) NOT NULL,
+  `medicalInstruction` VARCHAR(2000) NOT NULL,
+  `doctorComment` VARCHAR(2000) NOT NULL,
+  `doctorId` INT NOT NULL,
+  `clinicId` INT NOT NULL,
+  `patientId` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_MedicalRecord_1_idx` (`doctorId` ASC) VISIBLE,
+  INDEX `fk_MedicalRecord_2_idx` (`clinicId` ASC) VISIBLE,
+  INDEX `fk_MedicalRecord_3_idx` (`patientId` ASC) VISIBLE,
+  CONSTRAINT `fk_MedicalRecord_1`
+    FOREIGN KEY (`doctorId`)
+    REFERENCES `heDeno`.`Doctor` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_MedicalRecord_2`
+    FOREIGN KEY (`clinicId`)
+    REFERENCES `heDeno`.`Clinic` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_MedicalRecord_3`
+    FOREIGN KEY (`patientId`)
+    REFERENCES `heDeno`.`Patient` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+/* === Column Changes By Qihan === */
+ALTER TABLE `hedeno`.`MedicalRecord`
+CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT;
+ALTER TABLE `hedeno`.`MedicalRecord`
+DROP COLUMN `mc`;
+ALTER TABLE `hedeno`.`MedicalRecord`
+DROP COLUMN `medicalInstruction`;
+ALTER TABLE `hedeno`.`MedicalRecord`
+DROP COLUMN `doctorComment`;
+ALTER TABLE `hedeno`.`MedicalRecord`
+ADD `allergies` VARCHAR(2000);
+ALTER TABLE `hedeno`.`MedicalRecord`
+ADD `familyMedicalHistory` VARCHAR(2000);
+ALTER TABLE `hedeno`.`MedicalRecord`
+ADD `currentMedications` VARCHAR(2000);
+ALTER TABLE `hedeno`.`MedicalRecord`
+ADD `diagnosis` VARCHAR(2000) NOT NULL;
+ALTER TABLE `hedeno`.`MedicalRecord`
+ADD `comment` VARCHAR(2000);
+ALTER TABLE `hedeno`.`MedicalRecord`
+ADD `appointmentId` INT NOT NULL;
+    
+    
 /* Appointment */
 CREATE TABLE `heDeno`.`Appointment` (
   `id` INT NOT NULL,
@@ -136,36 +239,20 @@ ALTER TABLE `heDeno`.`Appointment`
 ADD COLUMN `status` VARCHAR(45) NOT NULL AFTER `patientId`;
 ALTER TABLE `heDeno`.`Appointment` 
 CHANGE COLUMN `status` `status` VARCHAR(45) NOT NULL DEFAULT 0 ;
+/* === Column Changes By Qihan === */
+ALTER TABLE `hedeno`.`appointment`
+ADD `MCId` INT;
+ALTER TABLE `hedeno`.`appointment`
+ADD `medicalRecordId` INT;
+ALTER TABLE `hedeno`.`appointment`
+ADD `medicalInstructId` INT;
+ALTER TABLE `hedeno`.`appointment`
+ADD FOREIGN KEY (`MCId`) REFERENCES `heDeno`.`mc` (`id`);
+ALTER TABLE `hedeno`.`appointment`
+ADD FOREIGN KEY (`medicalRecordId`) REFERENCES `heDeno`.`medicalrecord` (`id`);
+ALTER TABLE `hedeno`.`appointment`
+ADD FOREIGN KEY (`medicalInstructId`) REFERENCES `heDeno`.`medicalinstruct` (`id`);
 
-/* Medical Record */
-CREATE TABLE `heDeno`.`MedicalRecord` (
-  `id` INT NOT NULL,
-  `date` DATE NOT NULL,
-  `mc` VARCHAR(100) NOT NULL,
-  `medicalInstruction` VARCHAR(2000) NOT NULL,
-  `doctorComment` VARCHAR(2000) NOT NULL,
-  `doctorId` INT NOT NULL,
-  `clinicId` INT NOT NULL,
-  `patientId` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_MedicalRecord_1_idx` (`doctorId` ASC) VISIBLE,
-  INDEX `fk_MedicalRecord_2_idx` (`clinicId` ASC) VISIBLE,
-  INDEX `fk_MedicalRecord_3_idx` (`patientId` ASC) VISIBLE,
-  CONSTRAINT `fk_MedicalRecord_1`
-    FOREIGN KEY (`doctorId`)
-    REFERENCES `heDeno`.`Doctor` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_MedicalRecord_2`
-    FOREIGN KEY (`clinicId`)
-    REFERENCES `heDeno`.`Clinic` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_MedicalRecord_3`
-    FOREIGN KEY (`patientId`)
-    REFERENCES `heDeno`.`Patient` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
 
 /* === New Specialty Table By Fang Jun === */
 CREATE TABLE `heDeno`.`specialty` (
@@ -186,4 +273,6 @@ INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Pla
 INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Psychiatry', 'Mental related');
 INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Rheumatology', 'Bone/Muscle related');
 INSERT INTO `heDeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Urology', 'Urine related');
-
+/* === Column Changes By FangJun === */
+INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('General', 'General');
+INSERT INTO `hedeno`.`specialty` (`specialtyName`, `specialtyDesc`) VALUES ('Dentist', 'Teeth-related');
