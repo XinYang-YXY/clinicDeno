@@ -56,7 +56,7 @@
                 console.log(jsonDataString);
 
             } else {
-                let entryHtml = `<h2 class="montserrat grey-blue - second medium - font">No Appointment Requests Found.</h2>`
+                let entryHtml = `<h2 class="montserrat grey-blue - second medium - font">No Appointment Requests Found.</h2><h2 class="montserrat grey-blue - second medium - font">Appointments might not be approved by clinic admin yet.</h2>`
                 $('#appointRequestList').append(entryHtml);
             }
         })

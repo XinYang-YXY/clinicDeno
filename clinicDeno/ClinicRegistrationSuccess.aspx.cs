@@ -16,7 +16,7 @@ namespace clinicDeno
 
         protected void addDoctorBtn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/DoctorRegistration.aspx");
         }
 
         protected void addAdminBtn_Click(object sender, EventArgs e)
