@@ -152,3 +152,11 @@ border:none;
 outline-color:white;
 }
 
+
+/*Extra added by Qihan*/
+.font-size-11 {
+    font-size: 1.1em;
+}
+.box-desktop-950 {
+    max-width: 950px;
+}

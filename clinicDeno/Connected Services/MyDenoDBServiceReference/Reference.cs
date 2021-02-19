@@ -250,6 +250,15 @@ namespace clinicDeno.MyDenoDBServiceReference {
         private string IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MCIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MIIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MRIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PatientIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -257,6 +266,21 @@ namespace clinicDeno.MyDenoDBServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.TimeSpan TimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int clinicIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string clinicNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string clinicTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string firstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string lastNameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -308,6 +332,45 @@ namespace clinicDeno.MyDenoDBServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MCId {
+            get {
+                return this.MCIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MCIdField, value) != true)) {
+                    this.MCIdField = value;
+                    this.RaisePropertyChanged("MCId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MIId {
+            get {
+                return this.MIIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MIIdField, value) != true)) {
+                    this.MIIdField = value;
+                    this.RaisePropertyChanged("MIId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MRId {
+            get {
+                return this.MRIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MRIdField, value) != true)) {
+                    this.MRIdField = value;
+                    this.RaisePropertyChanged("MRId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string PatientId {
             get {
                 return this.PatientIdField;
@@ -342,6 +405,71 @@ namespace clinicDeno.MyDenoDBServiceReference {
                 if ((this.TimeField.Equals(value) != true)) {
                     this.TimeField = value;
                     this.RaisePropertyChanged("Time");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int clinicId {
+            get {
+                return this.clinicIdField;
+            }
+            set {
+                if ((this.clinicIdField.Equals(value) != true)) {
+                    this.clinicIdField = value;
+                    this.RaisePropertyChanged("clinicId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string clinicName {
+            get {
+                return this.clinicNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.clinicNameField, value) != true)) {
+                    this.clinicNameField = value;
+                    this.RaisePropertyChanged("clinicName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string clinicType {
+            get {
+                return this.clinicTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.clinicTypeField, value) != true)) {
+                    this.clinicTypeField = value;
+                    this.RaisePropertyChanged("clinicType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string firstName {
+            get {
+                return this.firstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.firstNameField, value) != true)) {
+                    this.firstNameField = value;
+                    this.RaisePropertyChanged("firstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string lastName {
+            get {
+                return this.lastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.lastNameField, value) != true)) {
+                    this.lastNameField = value;
+                    this.RaisePropertyChanged("lastName");
                 }
             }
         }
@@ -734,6 +862,541 @@ namespace clinicDeno.MyDenoDBServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MedicalRecord", Namespace="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity")]
+    [System.SerializableAttribute()]
+    public partial class MedicalRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AllergiesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AppointmentIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ClinicIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CommentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CurrentMedicationsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DiagnosisField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DoctorIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FamilyMedicalHistoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PatientIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Allergies {
+            get {
+                return this.AllergiesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AllergiesField, value) != true)) {
+                    this.AllergiesField = value;
+                    this.RaisePropertyChanged("Allergies");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AppointmentId {
+            get {
+                return this.AppointmentIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AppointmentIdField, value) != true)) {
+                    this.AppointmentIdField = value;
+                    this.RaisePropertyChanged("AppointmentId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ClinicId {
+            get {
+                return this.ClinicIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ClinicIdField, value) != true)) {
+                    this.ClinicIdField = value;
+                    this.RaisePropertyChanged("ClinicId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Comment {
+            get {
+                return this.CommentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CommentField, value) != true)) {
+                    this.CommentField = value;
+                    this.RaisePropertyChanged("Comment");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CurrentMedications {
+            get {
+                return this.CurrentMedicationsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CurrentMedicationsField, value) != true)) {
+                    this.CurrentMedicationsField = value;
+                    this.RaisePropertyChanged("CurrentMedications");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Date {
+            get {
+                return this.DateField;
+            }
+            set {
+                if ((this.DateField.Equals(value) != true)) {
+                    this.DateField = value;
+                    this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Diagnosis {
+            get {
+                return this.DiagnosisField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DiagnosisField, value) != true)) {
+                    this.DiagnosisField = value;
+                    this.RaisePropertyChanged("Diagnosis");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DoctorId {
+            get {
+                return this.DoctorIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DoctorIdField, value) != true)) {
+                    this.DoctorIdField = value;
+                    this.RaisePropertyChanged("DoctorId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FamilyMedicalHistory {
+            get {
+                return this.FamilyMedicalHistoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FamilyMedicalHistoryField, value) != true)) {
+                    this.FamilyMedicalHistoryField = value;
+                    this.RaisePropertyChanged("FamilyMedicalHistory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdField, value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PatientId {
+            get {
+                return this.PatientIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PatientIdField, value) != true)) {
+                    this.PatientIdField = value;
+                    this.RaisePropertyChanged("PatientId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MedicalInstruct", Namespace="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity")]
+    [System.SerializableAttribute()]
+    public partial class MedicalInstruct : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AppointmentIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DoctorIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InstructionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PatientIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PrescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string QuantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RefillsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AppointmentId {
+            get {
+                return this.AppointmentIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AppointmentIdField, value) != true)) {
+                    this.AppointmentIdField = value;
+                    this.RaisePropertyChanged("AppointmentId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Date {
+            get {
+                return this.DateField;
+            }
+            set {
+                if ((this.DateField.Equals(value) != true)) {
+                    this.DateField = value;
+                    this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DoctorId {
+            get {
+                return this.DoctorIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DoctorIdField, value) != true)) {
+                    this.DoctorIdField = value;
+                    this.RaisePropertyChanged("DoctorId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdField, value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Instruction {
+            get {
+                return this.InstructionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InstructionField, value) != true)) {
+                    this.InstructionField = value;
+                    this.RaisePropertyChanged("Instruction");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PatientId {
+            get {
+                return this.PatientIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PatientIdField, value) != true)) {
+                    this.PatientIdField = value;
+                    this.RaisePropertyChanged("PatientId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Prescription {
+            get {
+                return this.PrescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PrescriptionField, value) != true)) {
+                    this.PrescriptionField = value;
+                    this.RaisePropertyChanged("Prescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Quantity {
+            get {
+                return this.QuantityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QuantityField, value) != true)) {
+                    this.QuantityField = value;
+                    this.RaisePropertyChanged("Quantity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Refills {
+            get {
+                return this.RefillsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RefillsField, value) != true)) {
+                    this.RefillsField = value;
+                    this.RaisePropertyChanged("Refills");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MedicalCertificate", Namespace="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity")]
+    [System.SerializableAttribute()]
+    public partial class MedicalCertificate : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AppointmentIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CommentsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DoctorIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DoctorSignatureField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime EndDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PatientIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime StartDateField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AppointmentId {
+            get {
+                return this.AppointmentIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AppointmentIdField, value) != true)) {
+                    this.AppointmentIdField = value;
+                    this.RaisePropertyChanged("AppointmentId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Comments {
+            get {
+                return this.CommentsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CommentsField, value) != true)) {
+                    this.CommentsField = value;
+                    this.RaisePropertyChanged("Comments");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DoctorId {
+            get {
+                return this.DoctorIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DoctorIdField, value) != true)) {
+                    this.DoctorIdField = value;
+                    this.RaisePropertyChanged("DoctorId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DoctorSignature {
+            get {
+                return this.DoctorSignatureField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DoctorSignatureField, value) != true)) {
+                    this.DoctorSignatureField = value;
+                    this.RaisePropertyChanged("DoctorSignature");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime EndDate {
+            get {
+                return this.EndDateField;
+            }
+            set {
+                if ((this.EndDateField.Equals(value) != true)) {
+                    this.EndDateField = value;
+                    this.RaisePropertyChanged("EndDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdField, value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PatientId {
+            get {
+                return this.PatientIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PatientIdField, value) != true)) {
+                    this.PatientIdField = value;
+                    this.RaisePropertyChanged("PatientId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime StartDate {
+            get {
+                return this.StartDateField;
+            }
+            set {
+                if ((this.StartDateField.Equals(value) != true)) {
+                    this.StartDateField = value;
+                    this.RaisePropertyChanged("StartDate");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MyDenoDBServiceReference.IService1")]
     public interface IService1 {
@@ -827,6 +1490,108 @@ namespace clinicDeno.MyDenoDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDoctorById", ReplyAction="http://tempuri.org/IService1/GetDoctorByIdResponse")]
         System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Doctor> GetDoctorByIdAsync(string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateMR", ReplyAction="http://tempuri.org/IService1/CreateMRResponse")]
+        int CreateMR(System.DateTime date, string allergies, string familyMedicalHistory, string currentMedications, string diagnosis, string comment, string doctorId, string clinicId, string patientId, string appointmentId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateMR", ReplyAction="http://tempuri.org/IService1/CreateMRResponse")]
+        System.Threading.Tasks.Task<int> CreateMRAsync(System.DateTime date, string allergies, string familyMedicalHistory, string currentMedications, string diagnosis, string comment, string doctorId, string clinicId, string patientId, string appointmentId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectMRById", ReplyAction="http://tempuri.org/IService1/SelectMRByIdResponse")]
+        clinicDeno.MyDenoDBServiceReference.MedicalRecord[] SelectMRById(string givenPatientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectMRById", ReplyAction="http://tempuri.org/IService1/SelectMRByIdResponse")]
+        System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.MedicalRecord[]> SelectMRByIdAsync(string givenPatientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectOneMRById", ReplyAction="http://tempuri.org/IService1/SelectOneMRByIdResponse")]
+        clinicDeno.MyDenoDBServiceReference.MedicalRecord SelectOneMRById(string givenMRId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectOneMRById", ReplyAction="http://tempuri.org/IService1/SelectOneMRByIdResponse")]
+        System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.MedicalRecord> SelectOneMRByIdAsync(string givenMRId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectMIById", ReplyAction="http://tempuri.org/IService1/SelectMIByIdResponse")]
+        clinicDeno.MyDenoDBServiceReference.MedicalInstruct[] SelectMIById(string givenPatientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectMIById", ReplyAction="http://tempuri.org/IService1/SelectMIByIdResponse")]
+        System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.MedicalInstruct[]> SelectMIByIdAsync(string givenPatientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectOneMIById", ReplyAction="http://tempuri.org/IService1/SelectOneMIByIdResponse")]
+        clinicDeno.MyDenoDBServiceReference.MedicalInstruct SelectOneMIById(string givenMIId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectOneMIById", ReplyAction="http://tempuri.org/IService1/SelectOneMIByIdResponse")]
+        System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.MedicalInstruct> SelectOneMIByIdAsync(string givenMIId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateMI", ReplyAction="http://tempuri.org/IService1/CreateMIResponse")]
+        int CreateMI(System.DateTime date, string prescription, string instruction, string quantity, string refills, string doctorId, string patientId, string appointmentId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateMI", ReplyAction="http://tempuri.org/IService1/CreateMIResponse")]
+        System.Threading.Tasks.Task<int> CreateMIAsync(System.DateTime date, string prescription, string instruction, string quantity, string refills, string doctorId, string patientId, string appointmentId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateMC", ReplyAction="http://tempuri.org/IService1/CreateMCResponse")]
+        int CreateMC(System.DateTime startDate, System.DateTime endDate, string comments, string doctorId, string doctorSignature, string patientId, string appointmentId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateMC", ReplyAction="http://tempuri.org/IService1/CreateMCResponse")]
+        System.Threading.Tasks.Task<int> CreateMCAsync(System.DateTime startDate, System.DateTime endDate, string comments, string doctorId, string doctorSignature, string patientId, string appointmentId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectMCById", ReplyAction="http://tempuri.org/IService1/SelectMCByIdResponse")]
+        clinicDeno.MyDenoDBServiceReference.MedicalCertificate[] SelectMCById(string givenPatientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectMCById", ReplyAction="http://tempuri.org/IService1/SelectMCByIdResponse")]
+        System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.MedicalCertificate[]> SelectMCByIdAsync(string givenPatientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectOneMCById", ReplyAction="http://tempuri.org/IService1/SelectOneMCByIdResponse")]
+        clinicDeno.MyDenoDBServiceReference.MedicalCertificate SelectOneMCById(string givenMCId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectOneMCById", ReplyAction="http://tempuri.org/IService1/SelectOneMCByIdResponse")]
+        System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.MedicalCertificate> SelectOneMCByIdAsync(string givenMCId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateDoctor", ReplyAction="http://tempuri.org/IService1/CreateDoctorResponse")]
+        int CreateDoctor(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string signature, string password, string clinicId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateDoctor", ReplyAction="http://tempuri.org/IService1/CreateDoctorResponse")]
+        System.Threading.Tasks.Task<int> CreateDoctorAsync(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string signature, string password, string clinicId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DoctorLoginVerify", ReplyAction="http://tempuri.org/IService1/DoctorLoginVerifyResponse")]
+        string[] DoctorLoginVerify(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DoctorLoginVerify", ReplyAction="http://tempuri.org/IService1/DoctorLoginVerifyResponse")]
+        System.Threading.Tasks.Task<string[]> DoctorLoginVerifyAsync(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPatientByName", ReplyAction="http://tempuri.org/IService1/GetPatientByNameResponse")]
+        clinicDeno.MyDenoDBServiceReference.Patient[] GetPatientByName(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPatientByName", ReplyAction="http://tempuri.org/IService1/GetPatientByNameResponse")]
+        System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Patient[]> GetPatientByNameAsync(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AppointAddMRId", ReplyAction="http://tempuri.org/IService1/AppointAddMRIdResponse")]
+        void AppointAddMRId(string typeid, string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AppointAddMRId", ReplyAction="http://tempuri.org/IService1/AppointAddMRIdResponse")]
+        System.Threading.Tasks.Task AppointAddMRIdAsync(string typeid, string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AppointAddMCId", ReplyAction="http://tempuri.org/IService1/AppointAddMCIdResponse")]
+        void AppointAddMCId(string typeid, string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AppointAddMCId", ReplyAction="http://tempuri.org/IService1/AppointAddMCIdResponse")]
+        System.Threading.Tasks.Task AppointAddMCIdAsync(string typeid, string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AppointAddMIId", ReplyAction="http://tempuri.org/IService1/AppointAddMIIdResponse")]
+        void AppointAddMIId(string typeid, string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AppointAddMIId", ReplyAction="http://tempuri.org/IService1/AppointAddMIIdResponse")]
+        System.Threading.Tasks.Task AppointAddMIIdAsync(string typeid, string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectClinicByID", ReplyAction="http://tempuri.org/IService1/SelectClinicByIDResponse")]
+        clinicDeno.MyDenoDBServiceReference.Clinic SelectClinicByID(string givenClinicID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectClinicByID", ReplyAction="http://tempuri.org/IService1/SelectClinicByIDResponse")]
+        System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Clinic> SelectClinicByIDAsync(string givenClinicID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAppointmentByDoctorId", ReplyAction="http://tempuri.org/IService1/GetAppointmentByDoctorIdResponse")]
+        clinicDeno.MyDenoDBServiceReference.Appointment[] GetAppointmentByDoctorId(string doctorId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAppointmentByDoctorId", ReplyAction="http://tempuri.org/IService1/GetAppointmentByDoctorIdResponse")]
+        System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Appointment[]> GetAppointmentByDoctorIdAsync(string doctorId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -974,6 +1739,142 @@ namespace clinicDeno.MyDenoDBServiceReference {
         
         public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Doctor> GetDoctorByIdAsync(string id) {
             return base.Channel.GetDoctorByIdAsync(id);
+        }
+        
+        public int CreateMR(System.DateTime date, string allergies, string familyMedicalHistory, string currentMedications, string diagnosis, string comment, string doctorId, string clinicId, string patientId, string appointmentId) {
+            return base.Channel.CreateMR(date, allergies, familyMedicalHistory, currentMedications, diagnosis, comment, doctorId, clinicId, patientId, appointmentId);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreateMRAsync(System.DateTime date, string allergies, string familyMedicalHistory, string currentMedications, string diagnosis, string comment, string doctorId, string clinicId, string patientId, string appointmentId) {
+            return base.Channel.CreateMRAsync(date, allergies, familyMedicalHistory, currentMedications, diagnosis, comment, doctorId, clinicId, patientId, appointmentId);
+        }
+        
+        public clinicDeno.MyDenoDBServiceReference.MedicalRecord[] SelectMRById(string givenPatientId) {
+            return base.Channel.SelectMRById(givenPatientId);
+        }
+        
+        public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.MedicalRecord[]> SelectMRByIdAsync(string givenPatientId) {
+            return base.Channel.SelectMRByIdAsync(givenPatientId);
+        }
+        
+        public clinicDeno.MyDenoDBServiceReference.MedicalRecord SelectOneMRById(string givenMRId) {
+            return base.Channel.SelectOneMRById(givenMRId);
+        }
+        
+        public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.MedicalRecord> SelectOneMRByIdAsync(string givenMRId) {
+            return base.Channel.SelectOneMRByIdAsync(givenMRId);
+        }
+        
+        public clinicDeno.MyDenoDBServiceReference.MedicalInstruct[] SelectMIById(string givenPatientId) {
+            return base.Channel.SelectMIById(givenPatientId);
+        }
+        
+        public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.MedicalInstruct[]> SelectMIByIdAsync(string givenPatientId) {
+            return base.Channel.SelectMIByIdAsync(givenPatientId);
+        }
+        
+        public clinicDeno.MyDenoDBServiceReference.MedicalInstruct SelectOneMIById(string givenMIId) {
+            return base.Channel.SelectOneMIById(givenMIId);
+        }
+        
+        public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.MedicalInstruct> SelectOneMIByIdAsync(string givenMIId) {
+            return base.Channel.SelectOneMIByIdAsync(givenMIId);
+        }
+        
+        public int CreateMI(System.DateTime date, string prescription, string instruction, string quantity, string refills, string doctorId, string patientId, string appointmentId) {
+            return base.Channel.CreateMI(date, prescription, instruction, quantity, refills, doctorId, patientId, appointmentId);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreateMIAsync(System.DateTime date, string prescription, string instruction, string quantity, string refills, string doctorId, string patientId, string appointmentId) {
+            return base.Channel.CreateMIAsync(date, prescription, instruction, quantity, refills, doctorId, patientId, appointmentId);
+        }
+        
+        public int CreateMC(System.DateTime startDate, System.DateTime endDate, string comments, string doctorId, string doctorSignature, string patientId, string appointmentId) {
+            return base.Channel.CreateMC(startDate, endDate, comments, doctorId, doctorSignature, patientId, appointmentId);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreateMCAsync(System.DateTime startDate, System.DateTime endDate, string comments, string doctorId, string doctorSignature, string patientId, string appointmentId) {
+            return base.Channel.CreateMCAsync(startDate, endDate, comments, doctorId, doctorSignature, patientId, appointmentId);
+        }
+        
+        public clinicDeno.MyDenoDBServiceReference.MedicalCertificate[] SelectMCById(string givenPatientId) {
+            return base.Channel.SelectMCById(givenPatientId);
+        }
+        
+        public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.MedicalCertificate[]> SelectMCByIdAsync(string givenPatientId) {
+            return base.Channel.SelectMCByIdAsync(givenPatientId);
+        }
+        
+        public clinicDeno.MyDenoDBServiceReference.MedicalCertificate SelectOneMCById(string givenMCId) {
+            return base.Channel.SelectOneMCById(givenMCId);
+        }
+        
+        public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.MedicalCertificate> SelectOneMCByIdAsync(string givenMCId) {
+            return base.Channel.SelectOneMCByIdAsync(givenMCId);
+        }
+        
+        public int CreateDoctor(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string signature, string password, string clinicId) {
+            return base.Channel.CreateDoctor(email, phoneNum, firstName, lastName, dob, gender, signature, password, clinicId);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreateDoctorAsync(string email, string phoneNum, string firstName, string lastName, System.DateTime dob, string gender, string signature, string password, string clinicId) {
+            return base.Channel.CreateDoctorAsync(email, phoneNum, firstName, lastName, dob, gender, signature, password, clinicId);
+        }
+        
+        public string[] DoctorLoginVerify(string email, string password) {
+            return base.Channel.DoctorLoginVerify(email, password);
+        }
+        
+        public System.Threading.Tasks.Task<string[]> DoctorLoginVerifyAsync(string email, string password) {
+            return base.Channel.DoctorLoginVerifyAsync(email, password);
+        }
+        
+        public clinicDeno.MyDenoDBServiceReference.Patient[] GetPatientByName(string name) {
+            return base.Channel.GetPatientByName(name);
+        }
+        
+        public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Patient[]> GetPatientByNameAsync(string name) {
+            return base.Channel.GetPatientByNameAsync(name);
+        }
+        
+        public void AppointAddMRId(string typeid, string id) {
+            base.Channel.AppointAddMRId(typeid, id);
+        }
+        
+        public System.Threading.Tasks.Task AppointAddMRIdAsync(string typeid, string id) {
+            return base.Channel.AppointAddMRIdAsync(typeid, id);
+        }
+        
+        public void AppointAddMCId(string typeid, string id) {
+            base.Channel.AppointAddMCId(typeid, id);
+        }
+        
+        public System.Threading.Tasks.Task AppointAddMCIdAsync(string typeid, string id) {
+            return base.Channel.AppointAddMCIdAsync(typeid, id);
+        }
+        
+        public void AppointAddMIId(string typeid, string id) {
+            base.Channel.AppointAddMIId(typeid, id);
+        }
+        
+        public System.Threading.Tasks.Task AppointAddMIIdAsync(string typeid, string id) {
+            return base.Channel.AppointAddMIIdAsync(typeid, id);
+        }
+        
+        public clinicDeno.MyDenoDBServiceReference.Clinic SelectClinicByID(string givenClinicID) {
+            return base.Channel.SelectClinicByID(givenClinicID);
+        }
+        
+        public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Clinic> SelectClinicByIDAsync(string givenClinicID) {
+            return base.Channel.SelectClinicByIDAsync(givenClinicID);
+        }
+        
+        public clinicDeno.MyDenoDBServiceReference.Appointment[] GetAppointmentByDoctorId(string doctorId) {
+            return base.Channel.GetAppointmentByDoctorId(doctorId);
+        }
+        
+        public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Appointment[]> GetAppointmentByDoctorIdAsync(string doctorId) {
+            return base.Channel.GetAppointmentByDoctorIdAsync(doctorId);
         }
     }
 }

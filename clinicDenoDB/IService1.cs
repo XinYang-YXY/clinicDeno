@@ -49,6 +49,47 @@ namespace clinicDenoDB
 
         [OperationContract]
         Doctor GetDoctorById(string id);
+
+        [OperationContract]
+        int CreateMR(DateTime date, string allergies, string familyMedicalHistory, string currentMedications, string diagnosis, string comment, string doctorId, string clinicId, string patientId, string appointmentId);
+        [OperationContract]
+        List<MedicalRecord> SelectMRById(string givenPatientId);
+        [OperationContract]
+        MedicalRecord SelectOneMRById(string givenMRId);
+
+        [OperationContract]
+        List<MedicalInstruct> SelectMIById(string givenPatientId);
+        [OperationContract]
+        MedicalInstruct SelectOneMIById(string givenMIId);
+        [OperationContract]
+        int CreateMI(DateTime date, string prescription, string instruction, string quantity, string refills, string doctorId, string patientId, string appointmentId);
+
+        [OperationContract]
+        int CreateMC(DateTime startDate, DateTime endDate, string comments, string doctorId, string doctorSignature, string patientId, string appointmentId);
+        [OperationContract]
+        List<MedicalCertificate> SelectMCById(string givenPatientId);
+        [OperationContract]
+        MedicalCertificate SelectOneMCById(string givenMCId);
+
+        [OperationContract]
+        int CreateDoctor(string email, string phoneNum, string firstName, string lastName, DateTime dob, string gender, string signature, string password, string clinicId);
+        [OperationContract]
+        List<string> DoctorLoginVerify(string email, string password);
+
+        [OperationContract]
+        List<Patient> GetPatientByName(string name);
+
+        [OperationContract]
+        void AppointAddMRId(string typeid, string id);
+        [OperationContract]
+        void AppointAddMCId(string typeid, string id);
+        [OperationContract]
+        void AppointAddMIId(string typeid, string id);
+
+        [OperationContract]
+        Clinic SelectClinicByID(string givenClinicID);
+        [OperationContract]
+        List<Appointment> GetAppointmentByDoctorId(string doctorId);
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

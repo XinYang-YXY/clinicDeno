@@ -95,5 +95,48 @@ namespace clinicDenoDB.Entity
 
         }
 
+        public List<Patient> GetPatientByName(string name)
+        {
+            //Customer cust = new Customer("111", "Phoon LK", "Nanyang Polytechnic", "560860", "61234567", "91234567");
+            //return cust;
+
+            //Step 1 -  Define a connection to the database by getting
+            //          the connection string from web.config
+            string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
+            MySqlConnection myConn = new MySqlConnection(DBConnect);
+
+            //Step 2 -  Create a DataAdapter to retrieve data from the database table
+            string sqlstmt = "Select * from patient where concat(firstName,' ',lastName) like @paraName";
+            MySqlDataAdapter da = new MySqlDataAdapter(sqlstmt, myConn);
+            da.SelectCommand.Parameters.AddWithValue("@paraName", "%"+ name + "%");
+
+            //Step 3 -  Create a DataSet to store the data to be retrieved
+            DataSet ds = new DataSet();
+
+            //Step 4 -  Use the DataAdapter to fill the DataSet with data retrieved
+            da.Fill(ds);
+
+            List<Patient> PatientList = new List<Patient>();
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            for (int i = 0; i < rec_cnt; i++)
+            {
+                DataRow row = ds.Tables[0].Rows[i];
+                string patientId = row["id"].ToString();
+                string secretId = row["secretId"].ToString();
+                string dataEmail = row["email"].ToString();
+                string phoneNum = row["phoneNum"].ToString();
+                string firstName = row["firstName"].ToString();
+                string lastName = row["lastName"].ToString();
+                string password = row["password"].ToString();
+                DateTime dob = Convert.ToDateTime(row["dob"].ToString());
+                string gender = row["gender"].ToString();
+                string nric = row["nric"].ToString();
+
+                Patient patient = new Patient(patientId, secretId, dataEmail, phoneNum, firstName, lastName, dob, gender, password, nric);
+                PatientList.Add(patient);
+            }
+            return PatientList;
+        }
+
     }
 }

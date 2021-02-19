@@ -107,5 +107,100 @@ namespace clinicDenoDB
             Appointment appointment = new Appointment();
             appointment.UpdateAppointmentStatus(id, newAppId);
         }
+
+        public int CreateMR(DateTime date, string allergies, string familyMedicalHistory, string currentMedications, string diagnosis, string comment, string doctorId, string clinicId, string patientId, string appointmentId)
+        {
+            MedicalRecord medicalRecord = new MedicalRecord(date, allergies, familyMedicalHistory, currentMedications, diagnosis, comment, doctorId, clinicId, patientId, appointmentId);
+            return medicalRecord.Insert();
+        }
+        public List<MedicalRecord> SelectMRById(string givenPatientId)
+        {
+            MedicalRecord medicalrecord = new MedicalRecord();
+            return medicalrecord.SelectMRById(givenPatientId);
+        }
+
+        public MedicalRecord SelectOneMRById(string givenMRId)
+        {
+            MedicalRecord medicalrecord = new MedicalRecord();
+            return medicalrecord.SelectOneMRById(givenMRId);
+        }
+
+        public int CreateMI(DateTime date, string prescription, string instruction, string quantity, string refills, string doctorId, string patientId, string appointmentId)
+        {
+            MedicalInstruct medicalInstruct = new MedicalInstruct(date, prescription, instruction, quantity, refills, doctorId, patientId, appointmentId);
+            return medicalInstruct.Insert();
+        }
+        public List<MedicalInstruct> SelectMIById(string givenPatientId)
+        {
+            MedicalInstruct medicalInstruct = new MedicalInstruct();
+            return medicalInstruct.SelectMIById(givenPatientId);
+        }
+
+        public MedicalInstruct SelectOneMIById(string givenMIId)
+        {
+            MedicalInstruct medicalInstruct = new MedicalInstruct();
+            return medicalInstruct.SelectOneMIById(givenMIId);
+        }
+        public int CreateMC(DateTime startDate, DateTime endDate, string comments, string doctorId, string doctorSignature, string patientId, string appointmentId)
+        {
+            MedicalCertificate medicalCertificate = new MedicalCertificate(startDate, endDate, comments, doctorId, doctorSignature, patientId, appointmentId);
+            return medicalCertificate.Insert();
+        }
+        public List<MedicalCertificate> SelectMCById(string givenPatientId)
+        {
+            MedicalCertificate medicalCertificate = new MedicalCertificate();
+            return medicalCertificate.SelectMCById(givenPatientId);
+        }
+
+        public MedicalCertificate SelectOneMCById(string givenMCId)
+        {
+            MedicalCertificate medicalCertificate = new MedicalCertificate();
+            return medicalCertificate.SelectOneMCById(givenMCId);
+        }
+
+        public int CreateDoctor(string email, string phoneNum, string firstName, string lastName, DateTime dob, string gender, string signature, string password, string clinicId)
+        {
+            Doctor doctor = new Doctor(email, phoneNum, firstName, lastName, dob, gender, signature, password, clinicId);
+            return doctor.Insert();
+
+        }
+
+        public List<string> DoctorLoginVerify(string email, string password)
+        {
+            Doctor doctor = new Doctor();
+            return doctor.DoctorLoginVerify(email, password);
+        }
+
+        public List<Patient> GetPatientByName(string name)
+        {
+            Patient patient = new Patient();
+            return patient.GetPatientByName(name);
+        }
+
+        public void AppointAddMRId(string typeid, string id)
+        {
+            Appointment appointment = new Appointment();
+            appointment.AddMRId(typeid, id);
+        }
+        public void AppointAddMCId(string typeid, string id)
+        {
+            Appointment appointment = new Appointment();
+            appointment.AddMCId(typeid, id);
+        }
+        public void AppointAddMIId(string typeid, string id)
+        {
+            Appointment appointment = new Appointment();
+            appointment.AddMIId(typeid, id);
+        }
+        public Clinic SelectClinicByID(string givenClinicID)
+        {
+            Clinic clinic = new Clinic();
+            return clinic.SelectClinicByID(givenClinicID);
+        }
+        public List<Appointment> GetAppointmentByDoctorId(string doctorId)
+        {
+            Appointment appointment = new Appointment();
+            return appointment.GetAppointmentByDoctorId(doctorId);
+        }
     }
 }

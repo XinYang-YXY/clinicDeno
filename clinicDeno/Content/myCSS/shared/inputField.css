@@ -48,3 +48,235 @@
 select:invalid {
     color: rgba(0, 21, 250, 0.4) !important;
 }
+
+/*Extra added by Qihan*/
+.long-inputField {
+    width: 870px;
+    border-radius: 0.5em;
+    background-color: rgba(130, 159, 217, 0.3);
+    border-color: rgba(130, 159, 217, 0.1);
+    padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: rgba(0, 21, 250, 1);
+    font-weight: 600;
+    font-family: "open sans";
+}
+
+    .long-inputField:focus {
+        outline: none;
+        border-color: rgba(130, 159, 217, 0.3);
+        transition: 0.5s all ease-in-out;
+    }
+
+.layout-records {
+    padding: 15px;
+    border-radius: 0.5em;
+    background-color: rgba(130, 159, 217, 0.15);
+    margin-right: 30px;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 30% 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 5px;
+    text-align: left;
+}
+
+.record-titles {
+    max-width: 160px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: rgba(35, 10, 89, 0.6);
+    font-weight: 600;
+    font-family: "open sans";
+}
+
+.record-titlesnew {
+    grid-column-start: 1;
+    max-width: 160px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: rgba(35, 10, 89, 0.6);
+    font-weight: 600;
+    font-family: "open sans";
+}
+
+.records {
+    max-width: 160px;
+    padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: rgba(35, 10, 89, 0.8);
+    font-weight: 600;
+    font-family: "open sans";
+}
+
+.long-layout-inputField {
+    margin-right: 30px;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.record-inputField {
+    padding: 15px;
+    margin-right: 30px;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 30% 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 5px;
+    text-align: left;
+}
+
+.record-inputFieldDetails {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 5px;
+    text-align: left;
+}
+
+.record-inputFieldAppointment {
+    padding: 15px;
+    margin-right: 30px;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    row-gap: 10px;
+    column-gap: 5px;
+    text-align: left;
+}
+
+.appoint-paperBtns {
+    padding: 15px;
+    margin-right: 30px;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 5px;
+}
+
+.record-btn {
+    grid-column: span 4;
+    justify-self: end;
+}
+
+.longinputHeader-row {
+    margin-top: 30px;
+    grid-column: span 1;
+    text-align: left;
+}
+
+.inputHeader-second {
+    grid-column: 3;
+    text-align: left;
+}
+
+.recordinputHeader-row {
+    grid-column-start: 1;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.2col {
+    grid-column: auto / span 2;
+    text-align: left;
+}
+
+.long-inputField-split {
+    width: 425px;
+    border-radius: 0.5em;
+    background-color: rgba(130, 159, 217, 0.3);
+    border-color: rgba(130, 159, 217, 0.1);
+    padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: rgba(0, 21, 250, 1);
+    font-weight: 600;
+    font-family: "open sans";
+}
+
+    .long-inputField-split:focus {
+        outline: none;
+        border-color: rgba(130, 159, 217, 0.3);
+        transition: 0.5s all ease-in-out;
+    }
+
+.long-inputField-2col {
+    width: 870px;
+    grid-column: auto / span 2;
+    text-align: left;
+    border-radius: 0.5em;
+    background-color: rgba(130, 159, 217, 0.3);
+    border-color: rgba(130, 159, 217, 0.1);
+    padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: rgba(0, 21, 250, 1);
+    font-weight: 600;
+    font-family: "open sans";
+}
+
+    .long-inputField-2col:focus {
+        outline: none;
+        border-color: rgba(130, 159, 217, 0.3);
+        transition: 0.5s all ease-in-out;
+    }
+
+.layout-inputField-noMargin {
+    grid-column: auto / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.standard-inputField-2col {
+    width: 520px;
+    grid-column: auto / span 2;
+    text-align: left;
+    border-radius: 0.5em;
+    background-color: rgba(130, 159, 217, 0.3);
+    border-color: rgba(130, 159, 217, 0.1);
+    padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: rgba(0, 21, 250, 1);
+    font-weight: 600;
+    font-family: "open sans";
+}
+
+    .standard-inputField-2col:focus {
+        outline: none;
+        border-color: rgba(130, 159, 217, 0.3);
+        transition: 0.5s all ease-in-out;
+    }
+
+.long-inputField-2col-fat {
+    width: 870px;
+    height: 250px;
+    grid-column: auto / span 2;
+    vertical-align: top;
+    text-align: left;
+    border-radius: 0.5em;
+    background-color: rgba(130, 159, 217, 0.3);
+    border-color: rgba(130, 159, 217, 0.1);
+    padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: rgba(0, 21, 250, 1);
+    font-weight: 600;
+    font-family: "open sans";
+}
+
+    .long-inputField-2col-fat:focus {
+        outline: none;
+        border-color: rgba(130, 159, 217, 0.3);
+        transition: 0.5s all ease-in-out;
+    }

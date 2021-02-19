@@ -17,6 +17,14 @@ namespace clinicDenoDB.Entity
         public string DoctorId { get; set; }
         public string PatientId { get; set; }
         public string Status { get; set; }
+        public string MCId { get; set; }
+        public string MRId { get; set; }
+        public string MIId { get; set; }
+        public string clinicName { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public string clinicType { get; set; }
+        public int clinicId { get; set; }
 
         public Appointment()
         {
@@ -39,6 +47,37 @@ namespace clinicDenoDB.Entity
             PatientId = patientId;
             Status = status;
 
+        }
+
+        public Appointment(string id, DateTime date, TimeSpan time, string doctorId, string patientId, string status, string mcid, string mrid, string miid)
+        {
+            Id = id;
+            Date = date;
+            Time = time;
+            DoctorId = doctorId;
+            PatientId = patientId;
+            Status = status;
+            MCId = mcid;
+            MRId = mrid;
+            MIId = miid;
+
+        }
+
+        public Appointment(string id, DateTime date, TimeSpan time, string doctorId, string patientId, string status, string mcid, string mrid, string miid, string clinicname, string firstname, string lastname, string clinictype)
+        {
+            Id = id;
+            Date = date;
+            Time = time;
+            DoctorId = doctorId;
+            PatientId = patientId;
+            Status = status;
+            MCId = mcid;
+            MRId = mrid;
+            MIId = miid;
+            clinicName = clinicname;
+            firstName = firstname;
+            lastName = lastname;
+            clinicType = clinictype;
         }
 
         public List<Appointment> SelectAll()
@@ -119,7 +158,7 @@ namespace clinicDenoDB.Entity
             MySqlConnection myConn = new MySqlConnection(DBConnect);
 
             //Step 2 -  Create a DataAdapter object to retrieve data from the database table
-            string sqlStmt = "Select * from Appointment Where id = @paraId";
+            string sqlStmt = "Select * FROM appointment INNER JOIN doctor ON doctor.id = appointment.doctorId INNER JOIN clinic on clinic.id = doctor.clientId WHERE appointment.id = @paraId";
             MySqlDataAdapter da = new MySqlDataAdapter(sqlStmt, myConn);
 
             da.SelectCommand.Parameters.AddWithValue("@paraId", id);
@@ -136,13 +175,21 @@ namespace clinicDenoDB.Entity
             for (int i = 0; i < rec_cnt; i++)
             {
                 DataRow row = ds.Tables[0].Rows[i];  // Sql command returns only one record
+                string ID = row["id"].ToString();
                 DateTime date = Convert.ToDateTime(row["date"].ToString());
                 TimeSpan time = TimeSpan.Parse(row["time"].ToString());
-                string doctorId = row["doctorId"].ToString();
+                string doctorid = row["doctorId"].ToString();
                 string patientId = row["patientId"].ToString();
                 string status = row["status"].ToString();
+                string MCId = row["MCId"].ToString();
+                string medicalRecordId = row["medicalRecordId"].ToString();
+                string medicalInstructId = row["medicalInstructId"].ToString();
+                string sclinicName = row["clinicName"].ToString();
+                string doctorFN = row["firstName"].ToString();
+                string doctorLN = row["lastName"].ToString();
+                string sclinicType = row["clinicType"].ToString();
 
-                appointment = new Appointment(id, date, time, doctorId, patientId, status);
+                appointment = new Appointment(ID, date, time, doctorid, patientId, status, MCId, medicalRecordId, medicalInstructId, sclinicName, doctorFN, doctorLN, sclinicType);
             }
             return appointment;
         }
@@ -170,6 +217,92 @@ namespace clinicDenoDB.Entity
             int result = sqlCmd.ExecuteNonQuery();
             // Step 5 :Close connection
             myConn.Close();
+        }
+
+        public void AddMRId(string typeid, string id)
+        {
+            string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
+            MySqlConnection myConn = new MySqlConnection(DBConnect);
+
+            string sqlstmt = "UPDATE appointment SET medicalRecordId = @typeid WHERE id = @id";
+            MySqlCommand sqlCmd = new MySqlCommand(sqlstmt, myConn);
+            sqlCmd.Parameters.AddWithValue("@typeid", typeid);
+            sqlCmd.Parameters.AddWithValue("@id", id);
+
+            myConn.Open();
+            int result = sqlCmd.ExecuteNonQuery();
+            myConn.Close();
+        }
+
+        public void AddMCId(string typeid, string id)
+        {
+            string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
+            MySqlConnection myConn = new MySqlConnection(DBConnect);
+
+            string sqlstmt = "UPDATE appointment SET MCId = @typeid WHERE id = @id";
+            MySqlCommand sqlCmd = new MySqlCommand(sqlstmt, myConn);
+            sqlCmd.Parameters.AddWithValue("@typeid", typeid);
+            sqlCmd.Parameters.AddWithValue("@id", id);
+
+            myConn.Open();
+            int result = sqlCmd.ExecuteNonQuery();
+            myConn.Close();
+        }
+
+        public void AddMIId(string typeid, string id)
+        {
+            string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
+            MySqlConnection myConn = new MySqlConnection(DBConnect);
+
+            string sqlstmt = "UPDATE appointment SET medicalInstructId = @typeid WHERE id = @id";
+            MySqlCommand sqlCmd = new MySqlCommand(sqlstmt, myConn);
+            sqlCmd.Parameters.AddWithValue("@typeid", typeid);
+            sqlCmd.Parameters.AddWithValue("@id", id);
+
+            myConn.Open();
+            int result = sqlCmd.ExecuteNonQuery();
+            myConn.Close();
+        }
+
+        public List<Appointment> GetAppointmentByDoctorId(string doctorId)
+        {
+            //Step 1 -  Define a connection to the database by getting
+            //          the connection string from App.config
+            string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
+            MySqlConnection myConn = new MySqlConnection(DBConnect);
+
+            //Step 2 -  Create a DataAdapter object to retrieve data from the database table
+            string sqlStmt = "Select * from Appointment Where doctorId = @paraDoctorId";
+            MySqlDataAdapter da = new MySqlDataAdapter(sqlStmt, myConn);
+
+            da.SelectCommand.Parameters.AddWithValue("@paraDoctorId", doctorId);
+
+            //Step 3 -  Create a DataSet to store the data to be retrieved
+            DataSet ds = new DataSet();
+
+            //Step 4 -  Use the DataAdapter to fill the DataSet with data retrieved
+            da.Fill(ds);
+
+            //Step 5 -  Read data from DataSet to List
+            List<Appointment> appointmentList = new List<Appointment>();
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            for (int i = 0; i < rec_cnt; i++)
+            {
+                DataRow row = ds.Tables[0].Rows[i];  // Sql command returns only one record
+                string ID = row["id"].ToString();
+                DateTime date = Convert.ToDateTime(row["date"].ToString());
+                TimeSpan time = TimeSpan.Parse(row["time"].ToString());
+                string doctorid = row["doctorId"].ToString();
+                string patientId = row["patientId"].ToString();
+                string status = row["status"].ToString();
+                string MCId = row["MCId"].ToString();
+                string medicalRecordId = row["medicalRecordId"].ToString();
+                string medicalInstructId = row["medicalInstructId"].ToString();
+
+                Appointment appointment = new Appointment(ID, date, time, doctorid, patientId, status, MCId, medicalRecordId, medicalInstructId);
+                appointmentList.Add(appointment);
+            }
+            return appointmentList;
         }
     }
 }

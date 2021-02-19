@@ -69,6 +69,33 @@ namespace clinicDeno
         protected global::System.Web.UI.HtmlControls.HtmlAnchor adminMenuBtn;
 
         /// <summary>
+        /// homeDoctorDashboardMenuBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor homeDoctorDashboardMenuBtn;
+
+        /// <summary>
+        /// upcomingDoctorAppointmentMenuBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor upcomingDoctorAppointmentMenuBtn;
+
+        /// <summary>
+        /// medicalRecordsBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor medicalRecordsBtn;
+
+        /// <summary>
         /// homeAdminDashboardMenuBtn control.
         /// </summary>
         /// <remarks>

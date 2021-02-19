@@ -55,22 +55,22 @@ namespace clinicDeno
             client.CreateClinicAdmin(adminEmail, adminPhoneNum, adminFirstName, adminLastName, adminDob, adminGender, adminPassword, clinicId, verificationId);
 
 
-            var gmailAddress = Environment.GetEnvironmentVariable("GMAIL_ADDRESS");
-            var gmailPassword = Environment.GetEnvironmentVariable("GMAIL_PASSWORD");
-            AdminLastName.Text = gmailAddress;
-            AdminFirstName.Text = gmailPassword;
-            MailMessage mail = new MailMessage();
-            mail.To.Add(clinicEmail);
-            mail.From = new MailAddress(gmailAddress);
-            mail.Subject = "[ClinicDeno] Account Verification";
-            mail.Body = $"Dear {adminClinicName},\n\n{adminFirstName} {adminLastName} has registered an administrator account under your clinic. \n\nPlease click the link below to verify this account. Otherwise, kindly ignore this email. Thank you!\n\n✅https://localhost:44361/EmailVerification?verifyId=" + verificationId + " \n\n\nRegards,\nClinicDeno Team";
-            SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com";
-            smtp.Port = 587;
-            smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new System.Net.NetworkCredential(gmailAddress, gmailPassword);
-            smtp.EnableSsl = true;
-            smtp.Send(mail);
+            //var gmailAddress = Environment.GetEnvironmentVariable("GMAIL_ADDRESS");
+            //var gmailPassword = Environment.GetEnvironmentVariable("GMAIL_PASSWORD");
+            //AdminLastName.Text = gmailAddress;
+            //AdminFirstName.Text = gmailPassword;
+            //MailMessage mail = new MailMessage();
+            //mail.To.Add(clinicEmail);
+            //mail.From = new MailAddress(gmailAddress);
+            //mail.Subject = "[ClinicDeno] Account Verification";
+            //mail.Body = $"Dear {adminClinicName},\n\n{adminFirstName} {adminLastName} has registered an administrator account under your clinic. \n\nPlease click the link below to verify this account. Otherwise, kindly ignore this email. Thank you!\n\n✅https://localhost:44361/EmailVerification?verifyId=" + verificationId + " \n\n\nRegards,\nClinicDeno Team";
+            //SmtpClient smtp = new SmtpClient();
+            //smtp.Host = "smtp.gmail.com";
+            //smtp.Port = 587;
+            //smtp.UseDefaultCredentials = false;
+            //smtp.Credentials = new System.Net.NetworkCredential(gmailAddress, gmailPassword);
+            //smtp.EnableSsl = true;
+            //smtp.Send(mail);
 
            Response.Redirect("~/AdminRegistrationSuccess.aspx");
 

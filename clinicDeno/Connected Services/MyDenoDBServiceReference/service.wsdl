@@ -6,6 +6,7 @@
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/clinicDenoDB" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IService1_GetData_InputMessage">
@@ -98,6 +99,108 @@
   <wsdl:message name="IService1_GetDoctorById_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDoctorByIdResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_CreateMR_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMR" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateMR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMRResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectMRById_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMRById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectMRById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMRByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectOneMRById_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectOneMRById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectOneMRById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectOneMRByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectMIById_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMIById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectMIById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMIByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectOneMIById_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectOneMIById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectOneMIById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectOneMIByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateMI_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMI" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateMI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateMC_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMC" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateMC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectMCById_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMCById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectMCById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMCByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectOneMCById_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectOneMCById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectOneMCById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectOneMCByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateDoctor_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDoctor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateDoctor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DoctorLoginVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoctorLoginVerify" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DoctorLoginVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoctorLoginVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPatientByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientByName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPatientByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AppointAddMRId_InputMessage">
+    <wsdl:part name="parameters" element="tns:AppointAddMRId" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AppointAddMRId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AppointAddMRIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AppointAddMCId_InputMessage">
+    <wsdl:part name="parameters" element="tns:AppointAddMCId" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AppointAddMCId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AppointAddMCIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AppointAddMIId_InputMessage">
+    <wsdl:part name="parameters" element="tns:AppointAddMIId" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AppointAddMIId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AppointAddMIIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectClinicByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectClinicByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectClinicByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectClinicByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAppointmentByDoctorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppointmentByDoctorId" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAppointmentByDoctorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppointmentByDoctorIdResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -158,6 +261,74 @@
     <wsdl:operation name="GetDoctorById">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDoctorById" message="tns:IService1_GetDoctorById_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDoctorByIdResponse" message="tns:IService1_GetDoctorById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateMR" message="tns:IService1_CreateMR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateMRResponse" message="tns:IService1_CreateMR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectMRById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectMRById" message="tns:IService1_SelectMRById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectMRByIdResponse" message="tns:IService1_SelectMRById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectOneMRById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectOneMRById" message="tns:IService1_SelectOneMRById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectOneMRByIdResponse" message="tns:IService1_SelectOneMRById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectMIById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectMIById" message="tns:IService1_SelectMIById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectMIByIdResponse" message="tns:IService1_SelectMIById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectOneMIById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectOneMIById" message="tns:IService1_SelectOneMIById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectOneMIByIdResponse" message="tns:IService1_SelectOneMIById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateMI" message="tns:IService1_CreateMI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateMIResponse" message="tns:IService1_CreateMI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateMC" message="tns:IService1_CreateMC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateMCResponse" message="tns:IService1_CreateMC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectMCById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectMCById" message="tns:IService1_SelectMCById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectMCByIdResponse" message="tns:IService1_SelectMCById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectOneMCById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectOneMCById" message="tns:IService1_SelectOneMCById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectOneMCByIdResponse" message="tns:IService1_SelectOneMCById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDoctor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateDoctor" message="tns:IService1_CreateDoctor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateDoctorResponse" message="tns:IService1_CreateDoctor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoctorLoginVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DoctorLoginVerify" message="tns:IService1_DoctorLoginVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DoctorLoginVerifyResponse" message="tns:IService1_DoctorLoginVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPatientByName" message="tns:IService1_GetPatientByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPatientByNameResponse" message="tns:IService1_GetPatientByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AppointAddMRId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AppointAddMRId" message="tns:IService1_AppointAddMRId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AppointAddMRIdResponse" message="tns:IService1_AppointAddMRId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AppointAddMCId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AppointAddMCId" message="tns:IService1_AppointAddMCId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AppointAddMCIdResponse" message="tns:IService1_AppointAddMCId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AppointAddMIId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AppointAddMIId" message="tns:IService1_AppointAddMIId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AppointAddMIIdResponse" message="tns:IService1_AppointAddMIId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectClinicByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectClinicByID" message="tns:IService1_SelectClinicByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectClinicByIDResponse" message="tns:IService1_SelectClinicByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppointmentByDoctorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAppointmentByDoctorId" message="tns:IService1_GetAppointmentByDoctorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAppointmentByDoctorIdResponse" message="tns:IService1_GetAppointmentByDoctorId_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -290,6 +461,159 @@
     </wsdl:operation>
     <wsdl:operation name="GetDoctorById">
       <soap:operation soapAction="http://tempuri.org/IService1/GetDoctorById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMR">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateMR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectMRById">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectMRById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectOneMRById">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectOneMRById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectMIById">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectMIById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectOneMIById">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectOneMIById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMI">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateMI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMC">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateMC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectMCById">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectMCById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectOneMCById">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectOneMCById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDoctor">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateDoctor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoctorLoginVerify">
+      <soap:operation soapAction="http://tempuri.org/IService1/DoctorLoginVerify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientByName">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPatientByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppointAddMRId">
+      <soap:operation soapAction="http://tempuri.org/IService1/AppointAddMRId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppointAddMCId">
+      <soap:operation soapAction="http://tempuri.org/IService1/AppointAddMCId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppointAddMIId">
+      <soap:operation soapAction="http://tempuri.org/IService1/AppointAddMIId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectClinicByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectClinicByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppointmentByDoctorId">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAppointmentByDoctorId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

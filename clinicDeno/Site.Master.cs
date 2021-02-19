@@ -13,7 +13,20 @@ namespace clinicDeno
         {
             if (Session["LoggedIn"] != null && Session["AuthToken"] != null && Request.Cookies["AuthToken"] != null)
             {
-                if (Session["AuthToken"].ToString().Equals(Request.Cookies["AuthToken"].Value))
+                if (Session["AuthToken"].ToString().Equals(Request.Cookies["AuthToken"].Value) & Session["ID"] != null)
+                {
+                    homeMenuBtn.Visible = false;
+                    clinicMenuBtn.Visible = false;
+                    doctorMenuBtn.Visible = false;
+                    adminMenuBtn.Visible = false;
+
+                    logoutMenuBtn.Visible = true;
+                    homeDoctorDashboardMenuBtn.Visible = true;
+                    upcomingDoctorAppointmentMenuBtn.Visible = true;
+                    medicalRecordsBtn.Visible = true;
+
+                }
+                else if (Session["AuthToken"].ToString().Equals(Request.Cookies["AuthToken"].Value))
                 {
                     homeMenuBtn.Visible = false;
                     clinicMenuBtn.Visible = false;

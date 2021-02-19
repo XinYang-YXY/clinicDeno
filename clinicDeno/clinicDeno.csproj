@@ -182,6 +182,18 @@
     <Content Include="Connected Services\MyDenoDBServiceReference\clinicDeno.MyDenoDBServiceReference.Doctor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\MyDenoDBServiceReference\clinicDeno.MyDenoDBServiceReference.MedicalCertificate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDenoDBServiceReference\clinicDeno.MyDenoDBServiceReference.MedicalInstruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDenoDBServiceReference\clinicDeno.MyDenoDBServiceReference.MedicalRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\MyDenoDBServiceReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\MyDenoDBServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\MyDenoDBServiceReference\configuration.svcinfo" />
     <None Include="Connected Services\MyDenoDBServiceReference\Reference.svcmap">
@@ -212,11 +224,22 @@
     <Content Include="CustomError\GenericError.html" />
     <Content Include="CustomError\HTTP403.html" />
     <Content Include="CustomError\HTTP404.html" />
+    <Content Include="DAppointment.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DoctorCreateMC.aspx" />
+    <Content Include="DoctorCreateMedicalInstruction.aspx" />
+    <Content Include="DoctorDashboard_Home.aspx" />
     <Content Include="DoctorLogin.aspx" />
+    <Content Include="DoctorRegistration.aspx" />
+    <Content Include="DoctorRegistrationSuccess.aspx" />
+    <Content Include="DoctorUpcomingAppointments.aspx" />
     <Content Include="EmailVerification.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="MedicalRecordsCreate.aspx" />
+    <Content Include="MedicalRecordsRecords.aspx" />
+    <Content Include="MedicalRecordsResults.aspx" />
+    <Content Include="MedicalRecordsSearch.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -357,6 +380,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="TempReport.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -461,6 +485,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="DAppointment.aspx.cs">
+      <DependentUpon>DAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DAppointment.aspx.designer.cs">
+      <DependentUpon>DAppointment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -468,12 +499,54 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DoctorCreateMC.aspx.cs">
+      <DependentUpon>DoctorCreateMC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoctorCreateMC.aspx.designer.cs">
+      <DependentUpon>DoctorCreateMC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorCreateMedicalInstruction.aspx.cs">
+      <DependentUpon>DoctorCreateMedicalInstruction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoctorCreateMedicalInstruction.aspx.designer.cs">
+      <DependentUpon>DoctorCreateMedicalInstruction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorDashboard_Home.aspx.cs">
+      <DependentUpon>DoctorDashboard_Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoctorDashboard_Home.aspx.designer.cs">
+      <DependentUpon>DoctorDashboard_Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DoctorLogin.aspx.cs">
       <DependentUpon>DoctorLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DoctorLogin.aspx.designer.cs">
       <DependentUpon>DoctorLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorRegistration.aspx.cs">
+      <DependentUpon>DoctorRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoctorRegistration.aspx.designer.cs">
+      <DependentUpon>DoctorRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorRegistrationSuccess.aspx.cs">
+      <DependentUpon>DoctorRegistrationSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoctorRegistrationSuccess.aspx.designer.cs">
+      <DependentUpon>DoctorRegistrationSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorUpcomingAppointments.aspx.cs">
+      <DependentUpon>DoctorUpcomingAppointments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoctorUpcomingAppointments.aspx.designer.cs">
+      <DependentUpon>DoctorUpcomingAppointments.aspx</DependentUpon>
     </Compile>
     <Compile Include="EmailVerification.aspx.cs">
       <DependentUpon>EmailVerification.aspx</DependentUpon>
@@ -484,6 +557,34 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecordsCreate.aspx.cs">
+      <DependentUpon>MedicalRecordsCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalRecordsCreate.aspx.designer.cs">
+      <DependentUpon>MedicalRecordsCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecordsRecords.aspx.cs">
+      <DependentUpon>MedicalRecordsRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalRecordsRecords.aspx.designer.cs">
+      <DependentUpon>MedicalRecordsRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecordsResults.aspx.cs">
+      <DependentUpon>MedicalRecordsResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalRecordsResults.aspx.designer.cs">
+      <DependentUpon>MedicalRecordsResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecordsSearch.aspx.cs">
+      <DependentUpon>MedicalRecordsSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalRecordsSearch.aspx.designer.cs">
+      <DependentUpon>MedicalRecordsSearch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -499,6 +600,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TempReport.aspx.cs">
+      <DependentUpon>TempReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TempReport.aspx.designer.cs">
+      <DependentUpon>TempReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

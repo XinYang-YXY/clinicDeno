@@ -27,6 +27,7 @@
     <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="22f84a59-9751-447d-b5f5-df5b47e89f6f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/clinicDenoDB/Service1/mex" />
     <MetadataFile FileName="clinicDenoDB.xsd" MetadataType="Schema" ID="294ccb25-0b39-4e40-a741-283a2bf99966" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/clinicDenoDB/Service1/mex" />
     <MetadataFile FileName="clinicDenoDB.Entity.xsd" MetadataType="Schema" ID="723955b9-4fd9-4219-9ed0-4309fd585e41" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/clinicDenoDB/Service1/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="fbc12207-b713-4faf-840a-820b46b679c7" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/clinicDenoDB/Service1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

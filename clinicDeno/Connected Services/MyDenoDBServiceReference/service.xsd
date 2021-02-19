@@ -3,6 +3,7 @@
   <xs:import namespace="http://schemas.datacontract.org/2004/07/clinicDenoDB" />
   <xs:import namespace="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" />
   <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:element name="GetData">
     <xs:complexType>
       <xs:sequence>
@@ -218,6 +219,272 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" minOccurs="0" name="GetDoctorByIdResult" nillable="true" type="q11:Doctor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="allergies" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="familyMedicalHistory" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currentMedications" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="diagnosis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doctorId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clinicId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="patientId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appointmentId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateMRResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMRById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenPatientId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMRByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" minOccurs="0" name="SelectMRByIdResult" nillable="true" type="q12:ArrayOfMedicalRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOneMRById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenMRId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOneMRByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" minOccurs="0" name="SelectOneMRByIdResult" nillable="true" type="q13:MedicalRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMIById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenPatientId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMIByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" minOccurs="0" name="SelectMIByIdResult" nillable="true" type="q14:ArrayOfMedicalInstruct" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOneMIById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenMIId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOneMIByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" minOccurs="0" name="SelectOneMIByIdResult" nillable="true" type="q15:MedicalInstruct" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="prescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="instruction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="refills" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doctorId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="patientId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appointmentId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateMIResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="comments" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doctorId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doctorSignature" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="patientId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appointmentId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateMCResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMCById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenPatientId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMCByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" minOccurs="0" name="SelectMCByIdResult" nillable="true" type="q16:ArrayOfMedicalCertificate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOneMCById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenMCId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOneMCByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" minOccurs="0" name="SelectOneMCByIdResult" nillable="true" type="q17:MedicalCertificate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDoctor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phoneNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dob" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="signature" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clinicId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDoctorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateDoctorResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoctorLoginVerify">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoctorLoginVerifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DoctorLoginVerifyResult" nillable="true" type="q18:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" minOccurs="0" name="GetPatientByNameResult" nillable="true" type="q19:ArrayOfPatient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AppointAddMRId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="typeid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AppointAddMRIdResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AppointAddMCId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="typeid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AppointAddMCIdResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AppointAddMIId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="typeid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AppointAddMIIdResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectClinicByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenClinicID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectClinicByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" minOccurs="0" name="SelectClinicByIDResult" nillable="true" type="q20:Clinic" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppointmentByDoctorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doctorId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppointmentByDoctorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" minOccurs="0" name="GetAppointmentByDoctorIdResult" nillable="true" type="q21:ArrayOfAppointment" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -67,6 +67,10 @@
                     <a class="nav-link grey-blue navigation-opacity montserrat nav-doctor" runat="server" href="~/DoctorLogin" id="doctorMenuBtn">Doctor</a>
                     <a class="nav-link grey-blue navigation-opacity montserrat nav-admin" runat="server" href="~/AdminLogin" id="adminMenuBtn">Administrator</a>
 
+                    <a class="nav-link grey-blue navigation-opacity montserrat nav-admin-home" runat="server" href="~/DoctorDashboard_Home" id="homeDoctorDashboardMenuBtn" visible="False">Home</a>
+                    <a class="nav-link grey-blue navigation-opacity montserrat nav-admin-upcoming" runat="server" href="~/DoctorUpcomingAppointments" id="upcomingDoctorAppointmentMenuBtn" visible="False">Upcoming Appointment</a>
+                    <a class="nav-link grey-blue navigation-opacity montserrat nav-admin-record" runat="server" href="~/MedicalRecordsSearch" id="medicalRecordsBtn" visible="False">Medical Records</a>
+
 
                     <a class="nav-link grey-blue navigation-opacity montserrat nav-admin-home" runat="server" href="~/AdminDashboard_Home" id="homeAdminDashboardMenuBtn" visible="False">Home</a>
                     <a class="nav-link grey-blue navigation-opacity montserrat nav-admin-request" runat="server" href="~/AdminDashboard_AppointmentRequests" id="appointmentRequestMenuBtn" visible="False">Appointment Requests</a>
