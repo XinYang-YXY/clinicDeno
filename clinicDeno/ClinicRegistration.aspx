@@ -16,11 +16,7 @@
                 </div>
 
                 <asp:TextBox ID="ClinicTypeNET" runat="server" Class="html-hidden"></asp:TextBox>
-                <select id="ClinicType" class="standard-inputField" required>
-                    <option value="" disabled selected class="">Clinic Type</option>
-                    <option value="general" class="standard-inputField" data-value="general">General</option>
-                    <option value="dentist" class="standard-inputField" data-value="dentist">Dentist</option>
-                </select>
+                <asp:DropDownList runat="server" ID="select_specialty" CssClass="standard-inputField full-width-inputField" required="true"/>
                 <asp:TextBox ID="ClinicEmail" runat="server" class="standard-inputField" type="email" placeholder="Clinic Email" required="true"></asp:TextBox>
                 <asp:TextBox ID="ClinicNum" runat="server" class="standard-inputField" type="tel" placeholder="+65 Phone Number" required="true"></asp:TextBox>
             </section>

@@ -90,6 +90,9 @@ namespace clinicDenoDB
         Clinic SelectClinicByID(string givenClinicID);
         [OperationContract]
         List<Appointment> GetAppointmentByDoctorId(string doctorId);
+
+        [OperationContract]
+        List<Specialty> GetAllSpecialty();
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

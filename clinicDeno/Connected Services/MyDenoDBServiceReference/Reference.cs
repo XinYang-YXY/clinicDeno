@@ -1397,6 +1397,51 @@ namespace clinicDeno.MyDenoDBServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Specialty", Namespace="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity")]
+    [System.SerializableAttribute()]
+    public partial class Specialty : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string specialtyNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string specialtyName {
+            get {
+                return this.specialtyNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.specialtyNameField, value) != true)) {
+                    this.specialtyNameField = value;
+                    this.RaisePropertyChanged("specialtyName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MyDenoDBServiceReference.IService1")]
     public interface IService1 {
@@ -1592,6 +1637,12 @@ namespace clinicDeno.MyDenoDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAppointmentByDoctorId", ReplyAction="http://tempuri.org/IService1/GetAppointmentByDoctorIdResponse")]
         System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Appointment[]> GetAppointmentByDoctorIdAsync(string doctorId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllSpecialty", ReplyAction="http://tempuri.org/IService1/GetAllSpecialtyResponse")]
+        clinicDeno.MyDenoDBServiceReference.Specialty[] GetAllSpecialty();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllSpecialty", ReplyAction="http://tempuri.org/IService1/GetAllSpecialtyResponse")]
+        System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Specialty[]> GetAllSpecialtyAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1875,6 +1926,14 @@ namespace clinicDeno.MyDenoDBServiceReference {
         
         public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Appointment[]> GetAppointmentByDoctorIdAsync(string doctorId) {
             return base.Channel.GetAppointmentByDoctorIdAsync(doctorId);
+        }
+        
+        public clinicDeno.MyDenoDBServiceReference.Specialty[] GetAllSpecialty() {
+            return base.Channel.GetAllSpecialty();
+        }
+        
+        public System.Threading.Tasks.Task<clinicDeno.MyDenoDBServiceReference.Specialty[]> GetAllSpecialtyAsync() {
+            return base.Channel.GetAllSpecialtyAsync();
         }
     }
 }

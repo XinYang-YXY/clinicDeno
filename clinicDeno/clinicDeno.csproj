@@ -194,6 +194,9 @@
     <None Include="Connected Services\MyDenoDBServiceReference\Arrays.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Connected Services\MyDenoDBServiceReference\clinicDeno.MyDenoDBServiceReference.Specialty.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\MyDenoDBServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\MyDenoDBServiceReference\configuration.svcinfo" />
     <None Include="Connected Services\MyDenoDBServiceReference\Reference.svcmap">

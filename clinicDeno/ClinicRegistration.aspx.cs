@@ -12,7 +12,16 @@ namespace clinicDeno
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
 
+            List<Specialty> specialtyList = new List<Specialty>();
+
+            specialtyList = client.GetAllSpecialty().ToList<Specialty>();
+
+            select_specialty.DataSource = specialtyList;
+            select_specialty.DataTextField = "specialtyName";
+            select_specialty.DataValueField = "specialtyName";
+            select_specialty.DataBind();
         }
 
         protected void ClinicRegistrationBtn_Click(object sender, EventArgs e)
@@ -20,7 +29,7 @@ namespace clinicDeno
             MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
 
             string clinicName = ClinicName.Text.ToString();
-            string clinicType = ClinicTypeNET.Text.ToString();
+            string clinicType = select_specialty.SelectedValue;
             string clinicEmail = ClinicEmail.Text.ToString();
             string clinicPhoneNum = ClinicNum.Text.ToString();
             TimeSpan clinicStartTime = TimeSpan.Parse(ClinicStartTime.Text.ToString());

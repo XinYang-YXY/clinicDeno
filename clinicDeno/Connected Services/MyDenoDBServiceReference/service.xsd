@@ -488,4 +488,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetAllSpecialty">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSpecialtyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/clinicDenoDB.Entity" minOccurs="0" name="GetAllSpecialtyResult" nillable="true" type="q22:ArrayOfSpecialty" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

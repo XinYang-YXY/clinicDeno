@@ -202,5 +202,11 @@ namespace clinicDenoDB
             Appointment appointment = new Appointment();
             return appointment.GetAppointmentByDoctorId(doctorId);
         }
+
+        public List<Specialty> GetAllSpecialty()
+        {
+            Specialty specialty = new Specialty();
+            return specialty.SelectAllSpecialty();
+        }
     }
 }

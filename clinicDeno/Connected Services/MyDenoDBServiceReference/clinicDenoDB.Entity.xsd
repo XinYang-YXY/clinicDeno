@@ -142,4 +142,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfPatient" nillable="true" type="tns:ArrayOfPatient" />
+  <xs:complexType name="ArrayOfSpecialty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Specialty" nillable="true" type="tns:Specialty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSpecialty" nillable="true" type="tns:ArrayOfSpecialty" />
+  <xs:complexType name="Specialty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="specialtyName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Specialty" nillable="true" type="tns:Specialty" />
 </xs:schema>
