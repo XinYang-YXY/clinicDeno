@@ -11,7 +11,18 @@ namespace clinicDeno
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["LoggedIn"] != null && Session["AuthToken"] != null && Request.Cookies["AuthToken"] != null)
+            {
+                if (Session["AuthToken"].ToString().Equals(Request.Cookies["AuthToken"].Value) & Session["ID"] != null) { }
+                else
+                {
+                    Response.Redirect($"~/AdminLogin.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect($"~/AdminLogin.aspx");
+            }
         }
 
         protected void SearchBtn_Click(object sender, EventArgs e)

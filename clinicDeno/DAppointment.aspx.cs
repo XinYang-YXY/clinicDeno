@@ -15,6 +15,18 @@ namespace clinicDeno
         string patientid = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["LoggedIn"] != null && Session["AuthToken"] != null && Request.Cookies["AuthToken"] != null)
+            {
+                if (Session["AuthToken"].ToString().Equals(Request.Cookies["AuthToken"].Value) & Session["ID"] != null) { }
+                else
+                {
+                    Response.Redirect($"~/AdminLogin.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect($"~/AdminLogin.aspx");
+            }
             string aid = Request.QueryString["aid"];
             MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
             Appointment appoint = client.GetAppointmentById(aid);
