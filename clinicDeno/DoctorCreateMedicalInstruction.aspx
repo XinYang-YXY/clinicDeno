@@ -35,13 +35,13 @@
             Rinput.placeholder = "Enter number of refilled allowed"
             document.getElementById("MainContent_MIPanel").appendChild(Rinput);
 
-            setInterval(function () {
-                var availableTags = "Acetaminophen,Acetaminophen,Albuterol,Alprazolam,AmlodipineMetoprolol,Amoxicillin,Atenolol,Atorvastatin,Citalopram,Fluticasone,Furosemide,Hydrochlorothiazide,Hydrocodone,Insulin glargine,Levothyroxine,Lisinopril,Losartan,Metformin,Montelukast,Neurontin,Omeprazole,Pantoprazole,Sertraline,Simvastatin,Trazodone,Xanax".split(',');
-                $(".P").autocomplete({
-                    source: availableTags
-                });
-            }, 100);
         }
+        setInterval(function () {
+            var availableTags = "Acetaminophen,Acetaminophen,Albuterol,Alprazolam,AmlodipineMetoprolol,Amoxicillin,Atenolol,Atorvastatin,Citalopram,Fluticasone,Furosemide,Hydrochlorothiazide,Hydrocodone,Insulin glargine,Levothyroxine,Lisinopril,Losartan,Metformin,Montelukast,Neurontin,Omeprazole,Pantoprazole,Sertraline,Simvastatin,Trazodone,Xanax".split(',');
+            $(".P").autocomplete({
+                source: availableTags
+            });
+        }, 100);
     </script>
     <section class="vertical-middle-landing">
         <div class="box-style box-desktop-950 item-center">
